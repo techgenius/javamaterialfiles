@@ -1,0 +1,195 @@
+<HTML>
+<!-- Mirrored from www.techgeniussolutions.com/Tutorial/Java/0140__Collections/Thecharacterarraybasedstring.htm by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 21 Sep 2013 18:55:48 GMT -->
+<HEAD><title> The character array based string : Auto Grow Array&nbsp;&laquo;&nbsp;Collections&nbsp;&laquo;&nbsp;Java Tutorial </title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="content-style-type" content="text/css"/><meta name="author" content="Demo Source and Support Ltd."/><meta name="copyright" content="2006 Demo Source and Support Ltd."/><meta name="description" CONTENT=" The character array based string : Auto Grow Array&nbsp;&laquo;&nbsp;Collections&nbsp;&laquo;&nbsp;Java Tutorial "/><meta name="keywords" CONTENT=" The character array based string : Auto Grow Array&nbsp;&laquo;&nbsp;Collections&nbsp;&laquo;&nbsp;Java Tutorial "/><LINK href="../../../style/techgeniussolutions.css" type=text/css rel=stylesheet><link rel="shortcut icon" href="http://www.techgeniussolutions.com/style/favicon.ico"></HEAD><body><H1>The character array based string : Auto Grow Array&nbsp;&laquo;&nbsp;Collections&nbsp;&laquo;&nbsp;Java Tutorial</H1><table width=1024 border=0><tr align=left><td width=140 valign=top align=left><table cellpadding=0 cellspacing=0 class=leftBarTable><tr><td class=leftLangCell><A href="http://www.techgeniussolutions.com/">Home</A></td></tr><tr><td><A href="../CatalogJava.html">Java Tutorial</a></td></tr><tr><td><table class=leftBarFolderTable><tr><td valign=top>1.</td><td><A href="../0020__Language/Catalog0020__Language.html">Language</a></td></tr><tr><td valign=top>2.</td><td><A href="../0040__Data-Type/Catalog0040__Data-Type.html">Data Type</a></td></tr><tr><td valign=top>3.</td><td><A href="../0060__Operators/Catalog0060__Operators.html">Operators</a></td></tr><tr><td valign=top>4.</td><td><A href="../0080__Statement-Control/Catalog0080__Statement-Control.html">Statement Control</a></td></tr><tr><td valign=top>5.</td><td><A href="../0100__Class-Definition/Catalog0100__Class-Definition.html">Class Definition</a></td></tr><tr><td valign=top>6.</td><td><A href="../0120__Development/Catalog0120__Development.html">Development</a></td></tr><tr><td valign=top>7.</td><td><A href="../0125__Reflection/Catalog0125__Reflection.html">Reflection</a></td></tr><tr><td valign=top>8.</td><td><A href="../0130__Regular-Expressions/Catalog0130__Regular-Expressions.html">Regular Expressions</a></td></tr><tr><td valign=top>9.</td><td><B>Collections</B></td></tr><tr><td valign=top>10.</td><td><A href="../0160__Thread/Catalog0160__Thread.html">Thread</a></td></tr><tr><td valign=top>11.</td><td><A href="../0180__File/Catalog0180__File.html">File</a></td></tr><tr><td valign=top>12.</td><td><A href="../0200__Generics/Catalog0200__Generics.html">Generics</a></td></tr><tr><td valign=top>13.</td><td><A href="../0220__I18N/Catalog0220__I18N.html">I18N</a></td></tr><tr><td valign=top>14.</td><td><A href="../0240__Swing/Catalog0240__Swing.html">Swing</a></td></tr><tr><td valign=top>15.</td><td><A href="../0260__Swing-Event/Catalog0260__Swing-Event.html">Swing Event</a></td></tr><tr><td valign=top>16.</td><td><A href="../0261__2D-Graphics/Catalog0261__2D-Graphics.html">2D Graphics</a></td></tr><tr><td valign=top>17.</td><td><A href="../0280__SWT/Catalog0280__SWT.html">SWT</a></td></tr><tr><td valign=top>18.</td><td><A href="../0300__SWT-2D-Graphics/Catalog0300__SWT-2D-Graphics.html">SWT 2D Graphics</a></td></tr><tr><td valign=top>19.</td><td><A href="../0320__Network/Catalog0320__Network.html">Network</a></td></tr><tr><td valign=top>20.</td><td><A href="../0340__Database/Catalog0340__Database.html">Database</a></td></tr><tr><td valign=top>21.</td><td><A href="../0350__Hibernate/Catalog0350__Hibernate.html">Hibernate</a></td></tr><tr><td valign=top>22.</td><td><A href="../0355__JPA/Catalog0355__JPA.html">JPA</a></td></tr><tr><td valign=top>23.</td><td><A href="../0360__JSP/Catalog0360__JSP.html">JSP</a></td></tr><tr><td valign=top>24.</td><td><A href="../0380__JSTL/Catalog0380__JSTL.html">JSTL</a></td></tr><tr><td valign=top>25.</td><td><A href="../0400__Servlet/Catalog0400__Servlet.html">Servlet</a></td></tr><tr><td valign=top>26.</td><td><A href="../0410__Web-Services-SOA/Catalog0410__Web-Services-SOA.html">Web Services SOA</a></td></tr><tr><td valign=top>27.</td><td><A href="../0415__EJB3/Catalog0415__EJB3.html">EJB3</a></td></tr><tr><td valign=top>28.</td><td><A href="../0417__Spring/Catalog0417__Spring.html">Spring</a></td></tr><tr><td valign=top>29.</td><td><A href="../0419__PDF/Catalog0419__PDF.html">PDF</a></td></tr><tr><td valign=top>30.</td><td><A href="../0420__Email/Catalog0420__Email.html">Email</a></td></tr><tr><td valign=top>31.</td><td><A href="../0430__J2ME/Catalog0430__J2ME.html">J2ME</a></td></tr><tr><td valign=top>32.</td><td><A href="../0440__J2EE-Application/Catalog0440__J2EE-Application.html">J2EE Application</a></td></tr><tr><td valign=top>33.</td><td><A href="../0440__XML/Catalog0440__XML.html">XML</a></td></tr><tr><td valign=top>34.</td><td><A href="../0460__Design-Pattern/Catalog0460__Design-Pattern.html">Design Pattern</a></td></tr><tr><td valign=top>35.</td><td><A href="../0480__Log/Catalog0480__Log.html">Log</a></td></tr><tr><td valign=top>36.</td><td><A href="../0490__Security/Catalog0490__Security.html">Security</a></td></tr><tr><td valign=top>37.</td><td><A href="../0500__Apache-Common/Catalog0500__Apache-Common.html">Apache Common</a></td></tr><tr><td valign=top>38.</td><td><A href="../0520__Ant/Catalog0520__Ant.html">Ant</a></td></tr><tr><td valign=top>39.</td><td><A href="../0540__JUnit/Catalog0540__JUnit.html">JUnit</a></td></tr></table></td></tr></table></td><td width=2px></td><td valign=top><TABLE class=googleBar width=800 cellSpacing=0 cellPadding=0 border=0><TBODY><TR><TD width=60%><A href="../CatalogJava.html">Java Tutorial</a>&nbsp;&raquo;&nbsp;<A href="Catalog0140__Collections.html">Collections</a>&nbsp;&raquo;&nbsp;<A href="0155__Auto-Grow-Array.html">Auto Grow Array</a></TD><TD align=right width=10%>&nbsp;</TD><TD align=right height=80% width=30%><form action="http://www.google.com/cse" id="cse-search-box"><div><input type="hidden" name="cx" value="partner-pub-1130008796007602:iri8be-v211" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="text" name="q" size="15" /><input type="submit" name="sa" value="Search" /></div></form><script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script></TD></FORM> </TD></TR></TBODY></TABLE><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=728;google_ad_height=90;google_ad_format="728x90_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="ffffff";google_color_link="003399";google_color_text="000000";google_color_url="75a3ed.html";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script><table width=800 border=0><tr><td class=codeTitle>9.10.4.The character array based string<span style='font-SIZE:80%;float:right'><a href='YourownautogrowthArray.html'>Previous</a>/<a href='ByteArraywrapsjavabytearraysbytetoallowbytearraystobeusedaskeysinhashtables.html'>Next</a></td></tr><tr><td><TABLE border=0><TR><TD height=20></TD></TR></TABLE>
+</td></tr><tr><td><table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+<td nowrap="nowrap" valign="top" align="left"><div class="codeShade"><code><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;Licensed&nbsp;to&nbsp;the&nbsp;Apache&nbsp;Software&nbsp;Foundation&nbsp;(ASF)&nbsp;under&nbsp;one&nbsp;or&nbsp;more</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;contributor&nbsp;license&nbsp;agreements.&nbsp;&nbsp;See&nbsp;the&nbsp;NOTICE&nbsp;file&nbsp;distributed&nbsp;with</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;this&nbsp;work&nbsp;for&nbsp;additional&nbsp;information&nbsp;regarding&nbsp;copyright&nbsp;ownership.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;The&nbsp;ASF&nbsp;licenses&nbsp;this&nbsp;file&nbsp;to&nbsp;You&nbsp;under&nbsp;the&nbsp;Apache&nbsp;License,&nbsp;Version&nbsp;2.0</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;(the&nbsp;&#34;License&#34;);&nbsp;you&nbsp;may&nbsp;not&nbsp;use&nbsp;this&nbsp;file&nbsp;except&nbsp;in&nbsp;compliance&nbsp;with</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;the&nbsp;License.&nbsp;&nbsp;You&nbsp;may&nbsp;obtain&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;License&nbsp;at</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.apache.org/licenses/LICENSE-2.0</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;Unless&nbsp;required&nbsp;by&nbsp;applicable&nbsp;law&nbsp;or&nbsp;agreed&nbsp;to&nbsp;in&nbsp;writing,&nbsp;software</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;distributed&nbsp;under&nbsp;the&nbsp;License&nbsp;is&nbsp;distributed&nbsp;on&nbsp;an&nbsp;&#34;AS&nbsp;IS&#34;&nbsp;BASIS,</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;WITHOUT&nbsp;WARRANTIES&nbsp;OR&nbsp;CONDITIONS&nbsp;OF&nbsp;ANY&nbsp;KIND,&nbsp;either&nbsp;express&nbsp;or&nbsp;implied.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;See&nbsp;the&nbsp;License&nbsp;for&nbsp;the&nbsp;specific&nbsp;language&nbsp;governing&nbsp;permissions&nbsp;and</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;limitations&nbsp;under&nbsp;the&nbsp;License.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@author&nbsp;</font><font color="#3f5fbf">Eric&nbsp;Ye,&nbsp;IBM</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@author&nbsp;</font><font color="#3f5fbf">Andy&nbsp;Clark,&nbsp;IBM</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@version&nbsp;</font><font color="#3f5fbf">$Id:&nbsp;XMLString.java&nbsp;447247&nbsp;2006-09-18&nbsp;05:23:52Z&nbsp;mrglavas&nbsp;$</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">XMLString&nbsp;</font><font color="#000000">{</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;The&nbsp;character&nbsp;array.&nbsp;*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>char</b></font><font color="#000000">[]&nbsp;</font><font color="#000000">ch;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;The&nbsp;offset&nbsp;into&nbsp;the&nbsp;character&nbsp;array.&nbsp;*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">offset;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;The&nbsp;length&nbsp;of&nbsp;characters&nbsp;from&nbsp;the&nbsp;offset.&nbsp;*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">length;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">//</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Constructors</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">//</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;Default&nbsp;constructor.&nbsp;*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">XMLString</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;&lt;init&gt;()</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Constructs&nbsp;an&nbsp;XMLString&nbsp;structure&nbsp;preset&nbsp;with&nbsp;the&nbsp;specified&nbsp;values.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">ch</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;character&nbsp;array.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">offset</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;offset&nbsp;into&nbsp;the&nbsp;character&nbsp;array.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">length</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;length&nbsp;of&nbsp;characters&nbsp;from&nbsp;the&nbsp;offset.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">XMLString</font><font color="#000000">(</font><font color="#7f0055"><b>char</b></font><font color="#000000">[]&nbsp;</font><font color="#000000">ch,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">offset,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">length</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">setValues</font><font color="#000000">(</font><font color="#000000">ch,&nbsp;offset,&nbsp;length</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;&lt;init&gt;(char[],int,int)</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Constructs&nbsp;an&nbsp;XMLString&nbsp;structure&nbsp;with&nbsp;copies&nbsp;of&nbsp;the&nbsp;values&nbsp;in&nbsp;the&nbsp;given</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;structure.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;This&nbsp;does&nbsp;not&nbsp;copy&nbsp;the&nbsp;character&nbsp;array;&nbsp;only&nbsp;the</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;reference&nbsp;to&nbsp;the&nbsp;array&nbsp;is&nbsp;copied.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">string</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;XMLString&nbsp;to&nbsp;copy.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">XMLString</font><font color="#000000">(</font><font color="#000000">XMLString&nbsp;string</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">setValues</font><font color="#000000">(</font><font color="#000000">string</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;&lt;init&gt;(XMLString)</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">//</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Public&nbsp;methods</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">//</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Initializes&nbsp;the&nbsp;contents&nbsp;of&nbsp;the&nbsp;XMLString&nbsp;structure&nbsp;with&nbsp;the&nbsp;specified</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;values.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">ch</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;character&nbsp;array.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">offset</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;offset&nbsp;into&nbsp;the&nbsp;character&nbsp;array.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">length</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;length&nbsp;of&nbsp;characters&nbsp;from&nbsp;the&nbsp;offset.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setValues</font><font color="#000000">(</font><font color="#7f0055"><b>char</b></font><font color="#000000">[]&nbsp;</font><font color="#000000">ch,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">offset,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">length</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.ch&nbsp;=&nbsp;ch;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.offset&nbsp;=&nbsp;offset;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.length&nbsp;=&nbsp;length;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;setValues(char[],int,int)</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Initializes&nbsp;the&nbsp;contents&nbsp;of&nbsp;the&nbsp;XMLString&nbsp;structure&nbsp;with&nbsp;copies&nbsp;of&nbsp;the</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;given&nbsp;string&nbsp;structure.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&lt;strong&gt;Note:&lt;/strong&gt;&nbsp;This&nbsp;does&nbsp;not&nbsp;copy&nbsp;the&nbsp;character&nbsp;array;&nbsp;only&nbsp;the</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;reference&nbsp;to&nbsp;the&nbsp;array&nbsp;is&nbsp;copied.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">s</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setValues</font><font color="#000000">(</font><font color="#000000">XMLString&nbsp;s</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">setValues</font><font color="#000000">(</font><font color="#000000">s.ch,&nbsp;s.offset,&nbsp;s.length</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;setValues(XMLString)</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;Resets&nbsp;all&nbsp;of&nbsp;the&nbsp;values&nbsp;to&nbsp;their&nbsp;defaults.&nbsp;*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">clear</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.ch&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.offset&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.length&nbsp;=&nbsp;-</font><font color="#990000">1</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;clear()</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Returns&nbsp;true&nbsp;if&nbsp;the&nbsp;contents&nbsp;of&nbsp;this&nbsp;XMLString&nbsp;structure&nbsp;and&nbsp;the&nbsp;specified</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;array&nbsp;are&nbsp;equal.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">ch</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;character&nbsp;array.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">offset</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;offset&nbsp;into&nbsp;the&nbsp;character&nbsp;array.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">length</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;length&nbsp;of&nbsp;characters&nbsp;from&nbsp;the&nbsp;offset.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">equals</font><font color="#000000">(</font><font color="#7f0055"><b>char</b></font><font color="#000000">[]&nbsp;</font><font color="#000000">ch,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">offset,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">length</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">ch&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;false</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#7f0055"><b>this</b></font><font color="#000000">.length&nbsp;!=&nbsp;length</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;false</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">i&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;i&nbsp;&lt;&nbsp;length;&nbsp;i++</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#7f0055"><b>this</b></font><font color="#000000">.ch</font><font color="#000000">[</font><font color="#7f0055"><b>this</b></font><font color="#000000">.offset&nbsp;+&nbsp;i</font><font color="#000000">]&nbsp;</font><font color="#000000">!=&nbsp;ch</font><font color="#000000">[</font><font color="#000000">offset&nbsp;+&nbsp;i</font><font color="#000000">])&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;false</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;true</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;equals(char[],int,int):boolean</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Returns&nbsp;true&nbsp;if&nbsp;the&nbsp;contents&nbsp;of&nbsp;this&nbsp;XMLString&nbsp;structure&nbsp;and&nbsp;the&nbsp;specified</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;string&nbsp;are&nbsp;equal.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">s</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;string&nbsp;to&nbsp;compare.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">equals</font><font color="#000000">(</font><font color="#000000">String&nbsp;s</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">s&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;false</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">length&nbsp;!=&nbsp;s.length</font><font color="#000000">())&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;false</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;is&nbsp;this&nbsp;faster&nbsp;than&nbsp;call&nbsp;s.toCharArray&nbsp;first&nbsp;and&nbsp;compare&nbsp;the</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;two&nbsp;arrays&nbsp;directly,&nbsp;which&nbsp;will&nbsp;possibly&nbsp;involve&nbsp;creating&nbsp;a</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;new&nbsp;char&nbsp;array&nbsp;object.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">i&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;i&nbsp;&lt;&nbsp;length;&nbsp;i++</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">ch</font><font color="#000000">[</font><font color="#000000">offset&nbsp;+&nbsp;i</font><font color="#000000">]&nbsp;</font><font color="#000000">!=&nbsp;s.charAt</font><font color="#000000">(</font><font color="#000000">i</font><font color="#000000">))&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;false</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;true</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;equals(String):boolean</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">//</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Object&nbsp;methods</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">//</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;Returns&nbsp;a&nbsp;string&nbsp;representation&nbsp;of&nbsp;this&nbsp;object.&nbsp;*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;toString</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">length&nbsp;&gt;&nbsp;</font><font color="#990000">0&nbsp;</font><font color="#000000">?&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">String</font><font color="#000000">(</font><font color="#000000">ch,&nbsp;offset,&nbsp;length</font><font color="#000000">)&nbsp;</font><font color="#000000">:&nbsp;</font><font color="#2a00ff">&#34;&#34;</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;toString():String</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#000000">}&nbsp;</font><font color="#3f7f5f">//&nbsp;class&nbsp;XMLString</font></code></div></td>   </tr>
+</table>
+</td></tr></table><div style='margin-left:10px;'><TABLE width="650"  border=0 cellSpacing=0 cellPadding=0 border=0><TBODY>
+<TR><TD align=left><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=300;google_ad_height=250;google_ad_format="300x250_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="FFFFFF";google_color_link="0077cc";google_color_url="0077cc.html";google_color_text="000000";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script></TD>
+<td align=right><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=300;google_ad_height=250;google_ad_format="300x250_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="FFFFFF";google_color_link="0077cc";google_color_url="0077cc.html";google_color_text="000000";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script></td></TR></TBODY></TABLE></div><TABLE border=0><TR><TD height=20></TD></TR></TABLE>
+<table cellpadding=0 cellspacing=0 width=800 border=0><tr><td colSpan=5>9.10.Auto Grow Array</td></tr><tr class=odd><td width=20></td><td width=100>9.10.1.</td><td  align=left><A href="AvariablelengthDoubleArrayexpandingandcontractingitsinternalstoragearrayaselementsareaddedandremoved.html">A variable length Double Array: expanding and contracting its internal storage array as elements are added and removed.</a></td></tr><tr class=even><td width=20></td><td width=100>9.10.2.</td><td  align=left><A href="SimpleobjectpoolBasedonThreadPoolandfewotherclasses.html">Simple object pool. Based on ThreadPool and few other classes</a></td></tr><tr class=odd><td width=20></td><td width=100>9.10.3.</td><td  align=left><A href="YourownautogrowthArray.html">Your own auto-growth Array</a></td></tr><tr class=even><td width=20></td><td width=100>9.10.4.</td><td  align=left>The character array based string</td></tr><tr class=odd><td width=20></td><td width=100>9.10.5.</td><td  align=left><A href="ByteArraywrapsjavabytearraysbytetoallowbytearraystobeusedaskeysinhashtables.html">ByteArray wraps java byte arrays (byte[]) to allow byte arrays to be used as keys in hashtables.</a></td></tr><tr class=even><td width=20></td><td width=100>9.10.6.</td><td  align=left><A href="Addsalltheelementsofthegivenarraysintoanewdoubletypearray.html">Adds all the elements of the given arrays into a new double-type array.</a></td></tr><tr class=odd><td width=20></td><td width=100>9.10.7.</td><td  align=left><A href="Awriterforcharstrings.html">A writer for char strings</a></td></tr><tr class=even><td width=20></td><td width=100>9.10.8.</td><td  align=left><A href="ArrayListforintegerobjects.html">Array-List for integer objects.</a></td></tr><tr class=odd><td width=20></td><td width=100>9.10.9.</td><td  align=left><A href="Simpleobjectpool.html">Simple object pool</a></td></tr><tr class=even><td width=20></td><td width=100>9.10.10.</td><td  align=left><A href="Concatenatestwoarraysofstrings.html">Concatenates two arrays of strings</a></td></tr><tr class=odd><td width=20></td><td width=100>9.10.11.</td><td  align=left><A href="Putstheentiresourcearrayinthetargetarrayatoffsetoffset.html">Puts the entire source array in the target array at offset offset.</a></td></tr><tr class=even><td width=20></td><td width=100>9.10.12.</td><td  align=left><A href="LazyListcreation.html">Lazy List creation</a></td></tr><tr class=odd><td width=20></td><td width=100>9.10.13.</td><td  align=left><A href="Storesalistofint.html">Stores a list of int</a></td></tr></table><TABLE border=0><TR><TD height=10></TD></TR></TABLE>
+</td></tr></table></td></tr></table><center><TABLE border=0><TR align=left><TD><A href="http://www.techgeniussolutions.com/">techgeniussolutions.com</A>  &nbsp;|&nbsp;<A href=http://www.techgeniussolutions.com/html/contact.htm>Contact Us</A>&nbsp;|&nbsp;<A href=http://www.techgeniussolutions.com/html/ad.htm>Privacy Policy</A></Td></TR><TR align=left><TD class=Templatetext>Copyright 2009 - 12 Demo Source and Support. All rights reserved.</TD></TR><TR align=left><TD>All other trademarks are property of their respective owners.</TD></TR></TABLE></center></BODY>
+<!-- Mirrored from www.techgeniussolutions.com/Tutorial/Java/0140__Collections/Thecharacterarraybasedstring.htm by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 21 Sep 2013 18:55:48 GMT -->
+</HTML>

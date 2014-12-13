@@ -1,0 +1,238 @@
+<HTML>
+<!-- Mirrored from www.techgeniussolutions.com/Tutorial/Java/0140__Collections/CaseBlindHashMapaHashMapextensionusingStringsaskeyvalues.htm by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 21 Sep 2013 18:55:46 GMT -->
+<HEAD><title> CaseBlindHashMap - a HashMap extension, using Strings as key values. : Customized Map&nbsp;&laquo;&nbsp;Collections&nbsp;&laquo;&nbsp;Java Tutorial </title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="content-style-type" content="text/css"/><meta name="author" content="Demo Source and Support Ltd."/><meta name="copyright" content="2006 Demo Source and Support Ltd."/><meta name="description" CONTENT=" CaseBlindHashMap - a HashMap extension, using Strings as key values. : Customized Map&nbsp;&laquo;&nbsp;Collections&nbsp;&laquo;&nbsp;Java Tutorial "/><meta name="keywords" CONTENT=" CaseBlindHashMap - a HashMap extension, using Strings as key values. : Customized Map&nbsp;&laquo;&nbsp;Collections&nbsp;&laquo;&nbsp;Java Tutorial "/><LINK href="../../../style/techgeniussolutions.css" type=text/css rel=stylesheet><link rel="shortcut icon" href="http://www.techgeniussolutions.com/style/favicon.ico"></HEAD><body><H1>CaseBlindHashMap - a HashMap extension, using Strings as key values. : Customized Map&nbsp;&laquo;&nbsp;Collections&nbsp;&laquo;&nbsp;Java Tutorial</H1><table width=1024 border=0><tr align=left><td width=140 valign=top align=left><table cellpadding=0 cellspacing=0 class=leftBarTable><tr><td class=leftLangCell><A href="http://www.techgeniussolutions.com/">Home</A></td></tr><tr><td><A href="../CatalogJava.html">Java Tutorial</a></td></tr><tr><td><table class=leftBarFolderTable><tr><td valign=top>1.</td><td><A href="../0020__Language/Catalog0020__Language.html">Language</a></td></tr><tr><td valign=top>2.</td><td><A href="../0040__Data-Type/Catalog0040__Data-Type.html">Data Type</a></td></tr><tr><td valign=top>3.</td><td><A href="../0060__Operators/Catalog0060__Operators.html">Operators</a></td></tr><tr><td valign=top>4.</td><td><A href="../0080__Statement-Control/Catalog0080__Statement-Control.html">Statement Control</a></td></tr><tr><td valign=top>5.</td><td><A href="../0100__Class-Definition/Catalog0100__Class-Definition.html">Class Definition</a></td></tr><tr><td valign=top>6.</td><td><A href="../0120__Development/Catalog0120__Development.html">Development</a></td></tr><tr><td valign=top>7.</td><td><A href="../0125__Reflection/Catalog0125__Reflection.html">Reflection</a></td></tr><tr><td valign=top>8.</td><td><A href="../0130__Regular-Expressions/Catalog0130__Regular-Expressions.html">Regular Expressions</a></td></tr><tr><td valign=top>9.</td><td><B>Collections</B></td></tr><tr><td valign=top>10.</td><td><A href="../0160__Thread/Catalog0160__Thread.html">Thread</a></td></tr><tr><td valign=top>11.</td><td><A href="../0180__File/Catalog0180__File.html">File</a></td></tr><tr><td valign=top>12.</td><td><A href="../0200__Generics/Catalog0200__Generics.html">Generics</a></td></tr><tr><td valign=top>13.</td><td><A href="../0220__I18N/Catalog0220__I18N.html">I18N</a></td></tr><tr><td valign=top>14.</td><td><A href="../0240__Swing/Catalog0240__Swing.html">Swing</a></td></tr><tr><td valign=top>15.</td><td><A href="../0260__Swing-Event/Catalog0260__Swing-Event.html">Swing Event</a></td></tr><tr><td valign=top>16.</td><td><A href="../0261__2D-Graphics/Catalog0261__2D-Graphics.html">2D Graphics</a></td></tr><tr><td valign=top>17.</td><td><A href="../0280__SWT/Catalog0280__SWT.html">SWT</a></td></tr><tr><td valign=top>18.</td><td><A href="../0300__SWT-2D-Graphics/Catalog0300__SWT-2D-Graphics.html">SWT 2D Graphics</a></td></tr><tr><td valign=top>19.</td><td><A href="../0320__Network/Catalog0320__Network.html">Network</a></td></tr><tr><td valign=top>20.</td><td><A href="../0340__Database/Catalog0340__Database.html">Database</a></td></tr><tr><td valign=top>21.</td><td><A href="../0350__Hibernate/Catalog0350__Hibernate.html">Hibernate</a></td></tr><tr><td valign=top>22.</td><td><A href="../0355__JPA/Catalog0355__JPA.html">JPA</a></td></tr><tr><td valign=top>23.</td><td><A href="../0360__JSP/Catalog0360__JSP.html">JSP</a></td></tr><tr><td valign=top>24.</td><td><A href="../0380__JSTL/Catalog0380__JSTL.html">JSTL</a></td></tr><tr><td valign=top>25.</td><td><A href="../0400__Servlet/Catalog0400__Servlet.html">Servlet</a></td></tr><tr><td valign=top>26.</td><td><A href="../0410__Web-Services-SOA/Catalog0410__Web-Services-SOA.html">Web Services SOA</a></td></tr><tr><td valign=top>27.</td><td><A href="../0415__EJB3/Catalog0415__EJB3.html">EJB3</a></td></tr><tr><td valign=top>28.</td><td><A href="../0417__Spring/Catalog0417__Spring.html">Spring</a></td></tr><tr><td valign=top>29.</td><td><A href="../0419__PDF/Catalog0419__PDF.html">PDF</a></td></tr><tr><td valign=top>30.</td><td><A href="../0420__Email/Catalog0420__Email.html">Email</a></td></tr><tr><td valign=top>31.</td><td><A href="../0430__J2ME/Catalog0430__J2ME.html">J2ME</a></td></tr><tr><td valign=top>32.</td><td><A href="../0440__J2EE-Application/Catalog0440__J2EE-Application.html">J2EE Application</a></td></tr><tr><td valign=top>33.</td><td><A href="../0440__XML/Catalog0440__XML.html">XML</a></td></tr><tr><td valign=top>34.</td><td><A href="../0460__Design-Pattern/Catalog0460__Design-Pattern.html">Design Pattern</a></td></tr><tr><td valign=top>35.</td><td><A href="../0480__Log/Catalog0480__Log.html">Log</a></td></tr><tr><td valign=top>36.</td><td><A href="../0490__Security/Catalog0490__Security.html">Security</a></td></tr><tr><td valign=top>37.</td><td><A href="../0500__Apache-Common/Catalog0500__Apache-Common.html">Apache Common</a></td></tr><tr><td valign=top>38.</td><td><A href="../0520__Ant/Catalog0520__Ant.html">Ant</a></td></tr><tr><td valign=top>39.</td><td><A href="../0540__JUnit/Catalog0540__JUnit.html">JUnit</a></td></tr></table></td></tr></table></td><td width=2px></td><td valign=top><TABLE class=googleBar width=800 cellSpacing=0 cellPadding=0 border=0><TBODY><TR><TD width=60%><A href="../CatalogJava.html">Java Tutorial</a>&nbsp;&raquo;&nbsp;<A href="Catalog0140__Collections.html">Collections</a>&nbsp;&raquo;&nbsp;<A href="0342__Customized-Map.html">Customized Map</a></TD><TD align=right width=10%>&nbsp;</TD><TD align=right height=80% width=30%><form action="#" id="cse-search-box"><div><input type="hidden" name="cx" value="partner-pub-1130008796007602:iri8be-v211" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="text" name="q" size="15" /><input type="submit" name="sa" value="Search" /></div></form><script type="text/javascript" src="#/brand?form=cse-search-box&amp;lang=en"></script></TD></FORM> </TD></TR></TBODY></TABLE><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=728;google_ad_height=90;google_ad_format="728x90_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="ffffff";google_color_link="003399";google_color_text="000000";google_color_url="75a3ed.html";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script><table width=800 border=0><tr><td class=codeTitle>9.33.4.CaseBlindHashMap - a HashMap extension, using Strings as key values.<span style='font-SIZE:80%;float:right'><a href='Amemoryefficienthashmap.html'>Previous</a>/<a href='Clonesamapandprefixesthekeysintheclone.html'>Next</a></td></tr><tr><td><TABLE border=0><TR><TD height=20></TD></TR></TABLE>
+</td></tr><tr><td><table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+<td nowrap="nowrap" valign="top" align="left"><div class="codeShade"><code><font color="#3f5fbf">/**********************************************************************************</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;Copyright&nbsp;(c)&nbsp;2003,&nbsp;2004&nbsp;The&nbsp;Regents&nbsp;of&nbsp;the&nbsp;University&nbsp;of&nbsp;Michigan,&nbsp;Trustees&nbsp;of&nbsp;Indiana&nbsp;University,</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Board&nbsp;of&nbsp;Trustees&nbsp;of&nbsp;the&nbsp;Leland&nbsp;Stanford,&nbsp;Jr.,&nbsp;University,&nbsp;and&nbsp;The&nbsp;MIT&nbsp;Corporation</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;Licensed&nbsp;under&nbsp;the&nbsp;Educational&nbsp;Community&nbsp;License&nbsp;Version&nbsp;1.0&nbsp;(the&nbsp;&#34;License&#34;);</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;By&nbsp;obtaining,&nbsp;using&nbsp;and/or&nbsp;copying&nbsp;this&nbsp;Original&nbsp;Work,&nbsp;you&nbsp;agree&nbsp;that&nbsp;you&nbsp;have&nbsp;read,</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;understand,&nbsp;and&nbsp;will&nbsp;comply&nbsp;with&nbsp;the&nbsp;terms&nbsp;and&nbsp;conditions&nbsp;of&nbsp;the&nbsp;Educational&nbsp;Community&nbsp;License.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;You&nbsp;may&nbsp;obtain&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;License&nbsp;at:</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://cvs.sakaiproject.org/licenses/license_1_0.html</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;THE&nbsp;SOFTWARE&nbsp;IS&nbsp;PROVIDED&nbsp;&#34;AS&nbsp;IS&#34;,&nbsp;WITHOUT&nbsp;WARRANTY&nbsp;OF&nbsp;ANY&nbsp;KIND,&nbsp;EXPRESS&nbsp;OR&nbsp;IMPLIED,</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;INCLUDING&nbsp;BUT&nbsp;NOT&nbsp;LIMITED&nbsp;TO&nbsp;THE&nbsp;WARRANTIES&nbsp;OF&nbsp;MERCHANTABILITY,&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;AND&nbsp;NONINFRINGEMENT.&nbsp;IN&nbsp;NO&nbsp;EVENT&nbsp;SHALL&nbsp;THE&nbsp;AUTHORS&nbsp;OR&nbsp;COPYRIGHT&nbsp;HOLDERS&nbsp;BE&nbsp;LIABLE&nbsp;FOR&nbsp;ANY&nbsp;CLAIM,</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;DAMAGES&nbsp;OR&nbsp;OTHER&nbsp;LIABILITY,&nbsp;WHETHER&nbsp;IN&nbsp;AN&nbsp;ACTION&nbsp;OF&nbsp;CONTRACT,&nbsp;TORT&nbsp;OR&nbsp;OTHERWISE,&nbsp;ARISING</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;FROM,&nbsp;OUT&nbsp;OF&nbsp;OR&nbsp;IN&nbsp;CONNECTION&nbsp;WITH&nbsp;THE&nbsp;SOFTWARE&nbsp;OR&nbsp;THE&nbsp;USE&nbsp;OR&nbsp;OTHER&nbsp;DEALINGS&nbsp;IN&nbsp;THE&nbsp;SOFTWARE.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">**********************************************************************************/</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">Copyright&nbsp;(c)&nbsp;2000-2003&nbsp;Board&nbsp;of&nbsp;Trustees&nbsp;of&nbsp;Leland&nbsp;Stanford&nbsp;Jr.&nbsp;University,</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">all&nbsp;rights&nbsp;reserved.</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">Permission&nbsp;is&nbsp;hereby&nbsp;granted,&nbsp;free&nbsp;of&nbsp;charge,&nbsp;to&nbsp;any&nbsp;person&nbsp;obtaining&nbsp;a&nbsp;copy</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">of&nbsp;this&nbsp;software&nbsp;and&nbsp;associated&nbsp;documentation&nbsp;files&nbsp;(the&nbsp;&#34;Software&#34;),&nbsp;to&nbsp;deal</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">in&nbsp;the&nbsp;Software&nbsp;without&nbsp;restriction,&nbsp;including&nbsp;without&nbsp;limitation&nbsp;the&nbsp;rights</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">to&nbsp;use,&nbsp;copy,&nbsp;modify,&nbsp;merge,&nbsp;publish,&nbsp;distribute,&nbsp;sublicense,&nbsp;and/or&nbsp;sell</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">copies&nbsp;of&nbsp;the&nbsp;Software,&nbsp;and&nbsp;to&nbsp;permit&nbsp;persons&nbsp;to&nbsp;whom&nbsp;the&nbsp;Software&nbsp;is</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">furnished&nbsp;to&nbsp;do&nbsp;so,&nbsp;subject&nbsp;to&nbsp;the&nbsp;following&nbsp;conditions:</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">The&nbsp;above&nbsp;copyright&nbsp;notice&nbsp;and&nbsp;this&nbsp;permission&nbsp;notice&nbsp;shall&nbsp;be&nbsp;included&nbsp;in</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">all&nbsp;copies&nbsp;or&nbsp;substantial&nbsp;portions&nbsp;of&nbsp;the&nbsp;Software.</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">THE&nbsp;SOFTWARE&nbsp;IS&nbsp;PROVIDED&nbsp;&#34;AS&nbsp;IS&#34;,&nbsp;WITHOUT&nbsp;WARRANTY&nbsp;OF&nbsp;ANY&nbsp;KIND,&nbsp;EXPRESS&nbsp;OR</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">IMPLIED,&nbsp;INCLUDING&nbsp;BUT&nbsp;NOT&nbsp;LIMITED&nbsp;TO&nbsp;THE&nbsp;WARRANTIES&nbsp;OF&nbsp;MERCHANTABILITY,</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE&nbsp;AND&nbsp;NONINFRINGEMENT.&nbsp;&nbsp;IN&nbsp;NO&nbsp;EVENT&nbsp;SHALL</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">STANFORD&nbsp;UNIVERSITY&nbsp;BE&nbsp;LIABLE&nbsp;FOR&nbsp;ANY&nbsp;CLAIM,&nbsp;DAMAGES&nbsp;OR&nbsp;OTHER&nbsp;LIABILITY,</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">WHETHER&nbsp;IN&nbsp;AN&nbsp;ACTION&nbsp;OF&nbsp;CONTRACT,&nbsp;TORT&nbsp;OR&nbsp;OTHERWISE,&nbsp;ARISING&nbsp;FROM,&nbsp;OUT&nbsp;OF&nbsp;OR</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">IN&nbsp;CONNECTION&nbsp;WITH&nbsp;THE&nbsp;SOFTWARE&nbsp;OR&nbsp;THE&nbsp;USE&nbsp;OR&nbsp;OTHER&nbsp;DEALINGS&nbsp;IN&nbsp;THE&nbsp;SOFTWARE.</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">Except&nbsp;as&nbsp;contained&nbsp;in&nbsp;this&nbsp;notice,&nbsp;the&nbsp;name&nbsp;of&nbsp;Stanford&nbsp;University&nbsp;shall&nbsp;not</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">be&nbsp;used&nbsp;in&nbsp;advertising&nbsp;or&nbsp;otherwise&nbsp;to&nbsp;promote&nbsp;the&nbsp;sale,&nbsp;use&nbsp;or&nbsp;other&nbsp;dealings</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">in&nbsp;this&nbsp;Software&nbsp;without&nbsp;prior&nbsp;written&nbsp;authorization&nbsp;from&nbsp;Stanford&nbsp;University.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.util.HashMap;</font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.util.Iterator;</font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.util.Set;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;CaseBlindHashMap&nbsp;-&nbsp;a&nbsp;HashMap&nbsp;extension,&nbsp;using&nbsp;&lt;code&gt;String&lt;/code&gt;s&nbsp;as&nbsp;key</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;values.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;Internally,&nbsp;keys&nbsp;are&nbsp;case&nbsp;insensitive:&nbsp;&lt;code&gt;ABC&lt;/code&gt;&nbsp;=&nbsp;&lt;code&gt;abc&lt;/code&gt;.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;Two&nbsp;methods&nbsp;have&nbsp;been&nbsp;added&nbsp;to&nbsp;facilitate&nbsp;working&nbsp;with&nbsp;Sets&nbsp;of&nbsp;key&nbsp;strings.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;See&nbsp;&lt;code&gt;stringKeySet()&lt;/code&gt;&nbsp;and&nbsp;&lt;code&gt;stringKeyIterator()&lt;/code&gt;.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">CaseBlindHashMap&nbsp;</font><font color="#7f0055"><b>extends&nbsp;</b></font><font color="#000000">HashMap&nbsp;</font><font color="#000000">{</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Constructors</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">CaseBlindHashMap</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>super</b></font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">CaseBlindHashMap</font><font color="#000000">(</font><font color="#000000">CaseBlindHashMap&nbsp;map</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>super</b></font><font color="#000000">(</font><font color="#000000">map</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">CaseBlindHashMap</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">initCap</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>super</b></font><font color="#000000">(</font><font color="#000000">initCap</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">CaseBlindHashMap</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">initCap,&nbsp;</font><font color="#7f0055"><b>float&nbsp;</b></font><font color="#000000">loadFactor</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>super</b></font><font color="#000000">(</font><font color="#000000">initCap,&nbsp;loadFactor</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Extensions</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Get&nbsp;the&nbsp;set&nbsp;of&nbsp;keys&nbsp;contained&nbsp;in&nbsp;this&nbsp;map.&nbsp;Keys&nbsp;values&nbsp;are&nbsp;returned&nbsp;as</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;simple&nbsp;&lt;code&gt;String&lt;/code&gt;s&nbsp;(not&nbsp;the&nbsp;&lt;code&gt;CaseBlindString&lt;/code&gt;s</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;used&nbsp;internally).</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;This&nbsp;is&nbsp;accopmlished&nbsp;by&nbsp;making&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;original&nbsp;map&nbsp;-&nbsp;modifications</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;made&nbsp;to&nbsp;this&nbsp;copy&nbsp;are&nbsp;not&nbsp;reflected&nbsp;in&nbsp;the&nbsp;original.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">The&nbsp;set&nbsp;of&nbsp;keys</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">Set&nbsp;stringKeySet</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Iterator&nbsp;iterator&nbsp;=&nbsp;</font><font color="#7f0055"><b>super</b></font><font color="#000000">.keySet</font><font color="#000000">()</font><font color="#000000">.iterator</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">HashMap&nbsp;stringKeys&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">HashMap</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>while&nbsp;</b></font><font color="#000000">(</font><font color="#000000">iterator.hasNext</font><font color="#000000">())&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;key&nbsp;=&nbsp;</font><font color="#000000">((</font><font color="#000000">CaseBlindString</font><font color="#000000">)&nbsp;</font><font color="#000000">iterator.next</font><font color="#000000">())</font><font color="#000000">.toString</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">stringKeys.put</font><font color="#000000">(</font><font color="#000000">key,&nbsp;get</font><font color="#000000">(</font><font color="#000000">key</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">stringKeys.keySet</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Get&nbsp;an&nbsp;Iterator&nbsp;to&nbsp;the&nbsp;String&nbsp;based&nbsp;key&nbsp;set</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">An&nbsp;iterator&nbsp;to&nbsp;the&nbsp;key&nbsp;set</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">Iterator&nbsp;stringKeyIterator</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">stringKeySet</font><font color="#000000">()</font><font color="#000000">.iterator</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Overridden&nbsp;HashMap&nbsp;methods</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Does&nbsp;the&nbsp;map&nbsp;contain&nbsp;this&nbsp;key?</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">key</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;key&nbsp;to&nbsp;look&nbsp;up</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">true&nbsp;If&nbsp;the&nbsp;key&nbsp;is&nbsp;present&nbsp;in&nbsp;the&nbsp;map</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">containsKey</font><font color="#000000">(</font><font color="#000000">String&nbsp;key</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;super</b></font><font color="#000000">.containsKey</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">CaseBlindString</font><font color="#000000">(</font><font color="#000000">key</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Fetch&nbsp;a&nbsp;value&nbsp;by&nbsp;name&nbsp;-&nbsp;null&nbsp;keys&nbsp;are&nbsp;not&nbsp;supported</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">key</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;key&nbsp;to&nbsp;look&nbsp;up</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">The&nbsp;associated&nbsp;value&nbsp;object</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">Object&nbsp;get</font><font color="#000000">(</font><font color="#000000">String&nbsp;key</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;super</b></font><font color="#000000">.get</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">CaseBlindString</font><font color="#000000">(</font><font color="#000000">key</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Add&nbsp;the&nbsp;key/value&nbsp;pair&nbsp;to&nbsp;the&nbsp;map&nbsp;-&nbsp;null&nbsp;values&nbsp;are&nbsp;not&nbsp;supported</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">key</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;key&nbsp;name</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">value</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;object&nbsp;to&nbsp;store</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">put</font><font color="#000000">(</font><font color="#000000">String&nbsp;key,&nbsp;Object&nbsp;value</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>super</b></font><font color="#000000">.put</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">CaseBlindString</font><font color="#000000">(</font><font color="#000000">key</font><font color="#000000">)</font><font color="#000000">,&nbsp;value</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Remove&nbsp;a&nbsp;key/value&nbsp;pair&nbsp;from&nbsp;this&nbsp;map</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">key</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Non-null&nbsp;key&nbsp;to&nbsp;remove</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">remove</font><font color="#000000">(</font><font color="#000000">String&nbsp;key</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">key&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">UnsupportedOperationException</font><font color="#000000">(</font><font color="#2a00ff">&#34;null&nbsp;key&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>super</b></font><font color="#000000">.remove</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">CaseBlindString</font><font color="#000000">(</font><font color="#000000">key</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;A&nbsp;crude,&nbsp;case&nbsp;insensitive&nbsp;string&nbsp;-&nbsp;used&nbsp;internally&nbsp;to&nbsp;represent&nbsp;key&nbsp;values.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Preserve&nbsp;the&nbsp;originl&nbsp;case,&nbsp;but&nbsp;compare&nbsp;for&nbsp;equality&nbsp;in&nbsp;a&nbsp;case&nbsp;blind</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;fashion.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;class&nbsp;</b></font><font color="#000000">CaseBlindString&nbsp;</font><font color="#000000">{</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;string;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Constructors</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">CaseBlindString</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">CaseBlindString</font><font color="#000000">(</font><font color="#000000">String&nbsp;string</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.string&nbsp;=&nbsp;string;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Fetch&nbsp;the&nbsp;original&nbsp;string</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">The&nbsp;original&nbsp;string</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;toString</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">string;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Case&nbsp;insensitive&nbsp;compare</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">True&nbsp;if&nbsp;the&nbsp;two&nbsp;strings&nbsp;match</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">equals</font><font color="#000000">(</font><font color="#000000">Object&nbsp;object</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">string&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">string&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">string.equalsIgnoreCase</font><font color="#000000">(((</font><font color="#000000">CaseBlindString</font><font color="#000000">)&nbsp;</font><font color="#000000">object</font><font color="#000000">)</font><font color="#000000">.toString</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Get&nbsp;a&nbsp;hash&nbsp;code&nbsp;for&nbsp;this&nbsp;case&nbsp;insensitive&nbsp;string</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">Hash&nbsp;code&nbsp;value</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">hashCode</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">string&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#2a00ff">&#34;null&#34;</font><font color="#000000">.hashCode</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">string.toUpperCase</font><font color="#000000">()</font><font color="#000000">.hashCode</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#000000">}</font></code></div></td>   </tr>
+</table>
+</td></tr></table><div style='margin-left:10px;'><TABLE width="650"  border=0 cellSpacing=0 cellPadding=0 border=0><TBODY>
+<TR><TD align=left><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=300;google_ad_height=250;google_ad_format="300x250_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="FFFFFF";google_color_link="0077cc";google_color_url="0077cc.html";google_color_text="000000";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script></TD>
+<td align=right><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=300;google_ad_height=250;google_ad_format="300x250_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="FFFFFF";google_color_link="0077cc";google_color_url="0077cc.html";google_color_text="000000";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script></td></TR></TBODY></TABLE></div><TABLE border=0><TR><TD height=20></TD></TR></TABLE>
+<table cellpadding=0 cellspacing=0 width=800 border=0><tr><td colSpan=5>9.33.Customized Map</td></tr><tr class=odd><td width=20></td><td width=100>9.33.1.</td><td  align=left><A href="Implementationofabitmapofanysizetogetherwithstaticmethodstomanipulateintbyteandbytevaluesasbitmaps.html">Implementation of a bit map of any size, together with static methods to manipulate int, byte and byte[] values as bit maps</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.2.</td><td  align=left><A href="Afixedsizemapimplementation.html">A fixed size map implementation.</a></td></tr><tr class=odd><td width=20></td><td width=100>9.33.3.</td><td  align=left><A href="Amemoryefficienthashmap.html">A memory-efficient hash map.</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.4.</td><td  align=left>CaseBlindHashMap - a HashMap extension, using Strings as key values.</td></tr><tr class=odd><td width=20></td><td width=100>9.33.5.</td><td  align=left><A href="Clonesamapandprefixesthekeysintheclone.html">Clones a map and prefixes the keys in the clone</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.6.</td><td  align=left><A href="ConvertsarrayintoajavautilMap.html">Converts array into a java.util.Map.</a></td></tr><tr class=odd><td width=20></td><td width=100>9.33.7.</td><td  align=left><A href="OrderedMap.html">Ordered Map</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.8.</td><td  align=left><A href="Ahashmapthatusesprimitiveintsforthekeyratherthanobjects.html">A hash map that uses primitive ints for the key rather than objects.</a></td></tr><tr class=odd><td width=20></td><td width=100>9.33.9.</td><td  align=left><A href="HashNMapstoresmultiplevaluesbyasinglekeyvalueValuescanberetrievedusingadirectqueryorbycreatinganenumerationoverthestoredelements.html">HashNMap stores multiple values by a single key value. Values can be retrieved using a direct query or by creating an enumeration over the stored elements.</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.10.</td><td  align=left><A href="AMapwherekeysarecomparedbyobjectidentityratherthanequals.html">A Map where keys are compared by object identity, rather than equals()</a></td></tr><tr class=odd><td width=20></td><td width=100>9.33.11.</td><td  align=left><A href="AjavautilMapimplementationusingreferencevalues.html">A java.util.Map implementation using reference values</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.12.</td><td  align=left><A href="Asimplehashmapfromkeystointegers.html">A simple hashmap from keys to integers</a></td></tr><tr class=odd><td width=20></td><td width=100>9.33.13.</td><td  align=left><A href="AnIdentityMapthatusesreferenceequalityinsteadofobjectequality.html">An IdentityMap that uses reference-equality instead of object-equality</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.14.</td><td  align=left><A href="Createsamutablemapfromtwoarrayswithkeysandvalues.html">Creates a mutable map from two arrays with keys and values</a></td></tr><tr class=odd><td width=20></td><td width=100>9.33.15.</td><td  align=left><A href="FixedsizehashmapusingStringvaluesaskeysmappedtoprimitiveintvalues.html">Fixed size hash map using String values as keys mapped to primitive int values.</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.16.</td><td  align=left><A href="HashmapforcountingreferencestoObjectkeys.html">Hash map for counting references to Object keys.</a></td></tr><tr class=odd><td width=20></td><td width=100>9.33.17.</td><td  align=left><A href="HashmapusingStringvaluesaskeysmappedtoprimitiveintvalues.html">Hash map using String values as keys mapped to primitive int values.</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.18.</td><td  align=left><A href="IntMapprovidesasimplehashmapfromkeystointegers.html">IntMap provides a simple hashmap from keys to integers</a></td></tr><tr class=odd><td width=20></td><td width=100>9.33.19.</td><td  align=left><A href="Listorderedmap.html">List ordered map</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.20.</td><td  align=left><A href="Lookuptablethatstoresalistofstrings.html">Lookup table that stores a list of strings</a></td></tr><tr class=odd><td width=20></td><td width=100>9.33.21.</td><td  align=left><A href="MapimplementationOptimizedforStringskeys.html">Map implementation Optimized for Strings keys</a></td></tr><tr class=even><td width=20></td><td width=100>9.33.22.</td><td  align=left><A href="Mapwithkeysiteratedininsertionorder.html">Map with keys iterated in insertion order</a></td></tr></table><TABLE border=0><TR><TD height=10></TD></TR></TABLE>
+</td></tr></table></td></tr></table><center><TABLE border=0><TR align=left><TD><A href="http://www.techgeniussolutions.com/">techgeniussolutions.com</A>  &nbsp;|&nbsp;<A href=http://www.techgeniussolutions.com/html/contact.htm>Contact Us</A>&nbsp;|&nbsp;<A href=http://www.techgeniussolutions.com/html/ad.htm>Privacy Policy</A></Td></TR><TR align=left><TD class=Templatetext>Copyright 2009 - 12 Demo Source and Support. All rights reserved.</TD></TR><TR align=left><TD>All other trademarks are property of their respective owners.</TD></TR></TABLE></center></BODY>
+<!-- Mirrored from www.techgeniussolutions.com/Tutorial/Java/0140__Collections/CaseBlindHashMapaHashMapextensionusingStringsaskeyvalues.htm by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 21 Sep 2013 18:55:46 GMT -->
+</HTML>

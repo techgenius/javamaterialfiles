@@ -1,0 +1,168 @@
+<HTML>
+<!-- Mirrored from www.techgeniussolutions.com/Tutorial/Java/0120__Development/Abeanthatcanbeusedtokeeptrackofacounter.htm by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 21 Sep 2013 18:55:44 GMT -->
+<HEAD><title> A bean that can be used to keep track of a counter : Debug&nbsp;&laquo;&nbsp;Development&nbsp;&laquo;&nbsp;Java Tutorial </title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="content-style-type" content="text/css"/><meta name="author" content="Demo Source and Support Ltd."/><meta name="copyright" content="2006 Demo Source and Support Ltd."/><meta name="description" CONTENT=" A bean that can be used to keep track of a counter : Debug&nbsp;&laquo;&nbsp;Development&nbsp;&laquo;&nbsp;Java Tutorial "/><meta name="keywords" CONTENT=" A bean that can be used to keep track of a counter : Debug&nbsp;&laquo;&nbsp;Development&nbsp;&laquo;&nbsp;Java Tutorial "/><LINK href="../../../style/techgeniussolutions.css" type=text/css rel=stylesheet><link rel="shortcut icon" href="http://www.techgeniussolutions.com/style/favicon.ico"></HEAD><body><H1>A bean that can be used to keep track of a counter : Debug&nbsp;&laquo;&nbsp;Development&nbsp;&laquo;&nbsp;Java Tutorial</H1><table width=1024 border=0><tr align=left><td width=140 valign=top align=left><table cellpadding=0 cellspacing=0 class=leftBarTable><tr><td class=leftLangCell><A href="http://www.techgeniussolutions.com/">Home</A></td></tr><tr><td><A href="../CatalogJava.html">Java Tutorial</a></td></tr><tr><td><table class=leftBarFolderTable><tr><td valign=top>1.</td><td><A href="../0020__Language/Catalog0020__Language.html">Language</a></td></tr><tr><td valign=top>2.</td><td><A href="../0040__Data-Type/Catalog0040__Data-Type.html">Data Type</a></td></tr><tr><td valign=top>3.</td><td><A href="../0060__Operators/Catalog0060__Operators.html">Operators</a></td></tr><tr><td valign=top>4.</td><td><A href="../0080__Statement-Control/Catalog0080__Statement-Control.html">Statement Control</a></td></tr><tr><td valign=top>5.</td><td><A href="../0100__Class-Definition/Catalog0100__Class-Definition.html">Class Definition</a></td></tr><tr><td valign=top>6.</td><td><B>Development</B></td></tr><tr><td valign=top>7.</td><td><A href="../0125__Reflection/Catalog0125__Reflection.html">Reflection</a></td></tr><tr><td valign=top>8.</td><td><A href="../0130__Regular-Expressions/Catalog0130__Regular-Expressions.html">Regular Expressions</a></td></tr><tr><td valign=top>9.</td><td><A href="../0140__Collections/Catalog0140__Collections.html">Collections</a></td></tr><tr><td valign=top>10.</td><td><A href="../0160__Thread/Catalog0160__Thread.html">Thread</a></td></tr><tr><td valign=top>11.</td><td><A href="../0180__File/Catalog0180__File.html">File</a></td></tr><tr><td valign=top>12.</td><td><A href="../0200__Generics/Catalog0200__Generics.html">Generics</a></td></tr><tr><td valign=top>13.</td><td><A href="../0220__I18N/Catalog0220__I18N.html">I18N</a></td></tr><tr><td valign=top>14.</td><td><A href="../0240__Swing/Catalog0240__Swing.html">Swing</a></td></tr><tr><td valign=top>15.</td><td><A href="../0260__Swing-Event/Catalog0260__Swing-Event.html">Swing Event</a></td></tr><tr><td valign=top>16.</td><td><A href="../0261__2D-Graphics/Catalog0261__2D-Graphics.html">2D Graphics</a></td></tr><tr><td valign=top>17.</td><td><A href="../0280__SWT/Catalog0280__SWT.html">SWT</a></td></tr><tr><td valign=top>18.</td><td><A href="../0300__SWT-2D-Graphics/Catalog0300__SWT-2D-Graphics.html">SWT 2D Graphics</a></td></tr><tr><td valign=top>19.</td><td><A href="../0320__Network/Catalog0320__Network.html">Network</a></td></tr><tr><td valign=top>20.</td><td><A href="../0340__Database/Catalog0340__Database.html">Database</a></td></tr><tr><td valign=top>21.</td><td><A href="../0350__Hibernate/Catalog0350__Hibernate.html">Hibernate</a></td></tr><tr><td valign=top>22.</td><td><A href="../0355__JPA/Catalog0355__JPA.html">JPA</a></td></tr><tr><td valign=top>23.</td><td><A href="../0360__JSP/Catalog0360__JSP.html">JSP</a></td></tr><tr><td valign=top>24.</td><td><A href="../0380__JSTL/Catalog0380__JSTL.html">JSTL</a></td></tr><tr><td valign=top>25.</td><td><A href="../0400__Servlet/Catalog0400__Servlet.html">Servlet</a></td></tr><tr><td valign=top>26.</td><td><A href="../0410__Web-Services-SOA/Catalog0410__Web-Services-SOA.html">Web Services SOA</a></td></tr><tr><td valign=top>27.</td><td><A href="../0415__EJB3/Catalog0415__EJB3.html">EJB3</a></td></tr><tr><td valign=top>28.</td><td><A href="../0417__Spring/Catalog0417__Spring.html">Spring</a></td></tr><tr><td valign=top>29.</td><td><A href="../0419__PDF/Catalog0419__PDF.html">PDF</a></td></tr><tr><td valign=top>30.</td><td><A href="../0420__Email/Catalog0420__Email.html">Email</a></td></tr><tr><td valign=top>31.</td><td><A href="../0430__J2ME/Catalog0430__J2ME.html">J2ME</a></td></tr><tr><td valign=top>32.</td><td><A href="../0440__J2EE-Application/Catalog0440__J2EE-Application.html">J2EE Application</a></td></tr><tr><td valign=top>33.</td><td><A href="../0440__XML/Catalog0440__XML.html">XML</a></td></tr><tr><td valign=top>34.</td><td><A href="../0460__Design-Pattern/Catalog0460__Design-Pattern.html">Design Pattern</a></td></tr><tr><td valign=top>35.</td><td><A href="../0480__Log/Catalog0480__Log.html">Log</a></td></tr><tr><td valign=top>36.</td><td><A href="../0490__Security/Catalog0490__Security.html">Security</a></td></tr><tr><td valign=top>37.</td><td><A href="../0500__Apache-Common/Catalog0500__Apache-Common.html">Apache Common</a></td></tr><tr><td valign=top>38.</td><td><A href="../0520__Ant/Catalog0520__Ant.html">Ant</a></td></tr><tr><td valign=top>39.</td><td><A href="../0540__JUnit/Catalog0540__JUnit.html">JUnit</a></td></tr></table></td></tr></table></td><td width=2px></td><td valign=top><TABLE class=googleBar width=800 cellSpacing=0 cellPadding=0 border=0><TBODY><TR><TD width=60%><A href="../CatalogJava.html">Java Tutorial</a>&nbsp;&raquo;&nbsp;<A href="Catalog0120__Development.html">Development</a>&nbsp;&raquo;&nbsp;<A href="1060__Debug.html">Debug</a></TD><TD align=right width=10%>&nbsp;</TD><TD align=right height=80% width=30%><form action="#" id="cse-search-box"><div><input type="hidden" name="cx" value="partner-pub-1130008796007602:iri8be-v211" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="text" name="q" size="15" /><input type="submit" name="sa" value="Search" /></div></form><script type="text/javascript" src="#/brand?form=cse-search-box&amp;lang=en"></script></TD></FORM> </TD></TR></TBODY></TABLE><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=728;google_ad_height=90;google_ad_format="728x90_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="ffffff";google_color_link="003399";google_color_text="000000";google_color_url="75a3ed.html";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script><table width=800 border=0><tr><td class=codeTitle>6.59.2.A bean that can be used to keep track of a counter<span style='font-SIZE:80%;float:right'><a href='Printsmessagesformattedforaspecificlinewidth.html'>Previous</a>/<a href='SwingConsole.html'>Next</a></td></tr><tr><td><TABLE border=0><TR><TD height=20></TD></TR></TABLE>
+</td></tr><tr><td><table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+<td nowrap="nowrap" valign="top" align="left"><div class="codeShade"><code><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;Copyright&nbsp;(c)&nbsp;2002-2003&nbsp;by&nbsp;OpenSymphony</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;All&nbsp;rights&nbsp;reserved.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.io.Serializable;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;A&nbsp;bean&nbsp;that&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;keep&nbsp;track&nbsp;of&nbsp;a&nbsp;counter.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&lt;p/&gt;</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;Since&nbsp;it&nbsp;is&nbsp;an&nbsp;Iterator&nbsp;it&nbsp;can&nbsp;be&nbsp;used&nbsp;by&nbsp;the&nbsp;iterator&nbsp;tag</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@author&nbsp;</font><font color="#3f5fbf">Rickard&nbsp;&Ouml;berg&nbsp;(rickard@middleware-company.com)</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@version&nbsp;</font><font color="#3f5fbf">$Revision:&nbsp;1282&nbsp;$</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@see&nbsp;</font><font color="#3f5fbf">&lt;related&gt;</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">Counter&nbsp;</font><font color="#7f0055"><b>implements&nbsp;</b></font><font color="#000000">java.util.Iterator,&nbsp;Serializable&nbsp;</font><font color="#000000">{</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">wrap&nbsp;=&nbsp;</font><font color="#7f0055"><b>false</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Attributes&nbsp;----------------------------------------------------</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">first&nbsp;=&nbsp;</font><font color="#990000">1</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">current&nbsp;=&nbsp;first;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">interval&nbsp;=&nbsp;</font><font color="#990000">1</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">last&nbsp;=&nbsp;-</font><font color="#990000">1</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setAdd</font><font color="#000000">(</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">addition</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">current&nbsp;+=&nbsp;addition;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setCurrent</font><font color="#000000">(</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">current</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.current&nbsp;=&nbsp;current;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">getCurrent</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">current;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setFirst</font><font color="#000000">(</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">first</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.first&nbsp;=&nbsp;first;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">current&nbsp;=&nbsp;first;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">getFirst</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">first;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setInterval</font><font color="#000000">(</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">interval</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.interval&nbsp;=&nbsp;interval;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">getInterval</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">interval;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setLast</font><font color="#000000">(</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">last</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.last&nbsp;=&nbsp;last;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">getLast</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">last;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Public&nbsp;--------------------------------------------------------</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">getNext</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">next&nbsp;=&nbsp;current;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">current&nbsp;+=&nbsp;interval;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">wrap&nbsp;&amp;&amp;&nbsp;</font><font color="#000000">(</font><font color="#000000">current&nbsp;&gt;&nbsp;last</font><font color="#000000">))&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">current&nbsp;-=&nbsp;</font><font color="#000000">((</font><font color="#990000">1&nbsp;</font><font color="#000000">+&nbsp;last</font><font color="#000000">)&nbsp;</font><font color="#000000">-&nbsp;first</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">next;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">getPrevious</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">current&nbsp;-=&nbsp;interval;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">wrap&nbsp;&amp;&amp;&nbsp;</font><font color="#000000">(</font><font color="#000000">current&nbsp;&lt;&nbsp;first</font><font color="#000000">))&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">current&nbsp;+=&nbsp;</font><font color="#000000">(</font><font color="#000000">last&nbsp;-&nbsp;first&nbsp;+&nbsp;</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">current;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setWrap</font><font color="#000000">(</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">wrap</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.wrap&nbsp;=&nbsp;wrap;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">isWrap</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">wrap;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">hasNext</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">((</font><font color="#000000">last&nbsp;==&nbsp;-</font><font color="#990000">1</font><font color="#000000">)&nbsp;</font><font color="#000000">||&nbsp;wrap</font><font color="#000000">)&nbsp;</font><font color="#000000">?&nbsp;</font><font color="#7f0055"><b>true&nbsp;</b></font><font color="#000000">:&nbsp;</font><font color="#000000">(</font><font color="#000000">current&nbsp;&lt;=&nbsp;last</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">Object&nbsp;next</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;new&nbsp;</b></font><font color="#000000">Long</font><font color="#000000">(</font><font color="#000000">getNext</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">remove</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Do&nbsp;nothing</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#000000">}</font><br/>
+<font color="#3f7f5f">///////////////////</font><br/>
+<font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;Copyright&nbsp;(c)&nbsp;2002-2003&nbsp;by&nbsp;OpenSymphony</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;All&nbsp;rights&nbsp;reserved.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#7f0055"><b>package&nbsp;</b></font><font color="#000000">com.opensymphony.webwork.util;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">junit.framework.TestCase;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#3f5fbf">/**</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;User:&nbsp;plightbo</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;Date:&nbsp;Jan&nbsp;7,&nbsp;2004</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;Time:&nbsp;7:55:35&nbsp;PM</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*/</font><br/>
+<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">CounterTest&nbsp;</font><font color="#7f0055"><b>extends&nbsp;</b></font><font color="#000000">TestCase&nbsp;</font><font color="#000000">{</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Counter&nbsp;c&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Counter</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">testCurrentAfterNext</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">next&nbsp;=&nbsp;c.getNext</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">current&nbsp;=&nbsp;c.getCurrent</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#000000">next&nbsp;+&nbsp;</font><font color="#990000">1</font><font color="#000000">,&nbsp;current</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">testCurrentBeforeNext</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">current&nbsp;=&nbsp;c.getCurrent</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">next&nbsp;=&nbsp;c.getNext</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#000000">current,&nbsp;next</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">testWrap</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.setWrap</font><font color="#000000">(</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.setLast</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">a&nbsp;=&nbsp;c.getNext</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">b&nbsp;=&nbsp;c.getNext</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">,&nbsp;a</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">,&nbsp;b</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#000000">}</font></code></div></td>   </tr>
+</table>
+</td></tr></table><div style='margin-left:10px;'><TABLE width="650"  border=0 cellSpacing=0 cellPadding=0 border=0><TBODY>
+<TR><TD align=left><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=300;google_ad_height=250;google_ad_format="300x250_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="FFFFFF";google_color_link="0077cc";google_color_url="0077cc.html";google_color_text="000000";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script></TD>
+<td align=right><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=300;google_ad_height=250;google_ad_format="300x250_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="FFFFFF";google_color_link="0077cc";google_color_url="0077cc.html";google_color_text="000000";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script></td></TR></TBODY></TABLE></div><TABLE border=0><TR><TD height=20></TD></TR></TABLE>
+<table cellpadding=0 cellspacing=0 width=800 border=0><tr><td colSpan=5>6.59.Debug</td></tr><tr class=odd><td width=20></td><td width=100>6.59.1.</td><td  align=left><A href="Printsmessagesformattedforaspecificlinewidth.html">Prints messages formatted for a specific line width.</a></td></tr><tr class=even><td width=20></td><td width=100>6.59.2.</td><td  align=left>A bean that can be used to keep track of a counter</td></tr><tr class=odd><td width=20></td><td width=100>6.59.3.</td><td  align=left><A href="SwingConsole.html">Swing Console</a></td></tr><tr class=even><td width=20></td><td width=100>6.59.4.</td><td  align=left><A href="Methodsforloggingevents.html">Methods for logging events</a></td></tr><tr class=odd><td width=20></td><td width=100>6.59.5.</td><td  align=left><A href="DebugUtility.html">Debug Utility</a></td></tr><tr class=even><td width=20></td><td width=100>6.59.6.</td><td  align=left><A href="Ahelperclassforprintingindentedtext.html">A helper class for printing indented text</a></td></tr><tr class=odd><td width=20></td><td width=100>6.59.7.</td><td  align=left><A href="Randomdatafortest.html">Random data for test</a></td></tr><tr class=even><td width=20></td><td width=100>6.59.8.</td><td  align=left><A href="CountUpDownLatch.html">Count Up Down Latch</a></td></tr><tr class=odd><td width=20></td><td width=100>6.59.9.</td><td  align=left><A href="Asimpleloggingfacility.html">A simple logging facility.</a></td></tr><tr class=even><td width=20></td><td width=100>6.59.10.</td><td  align=left><A href="Printingindentedtext.html">Printing indented text</a></td></tr></table><TABLE border=0><TR><TD height=10></TD></TR></TABLE>
+</td></tr></table></td></tr></table><center><TABLE border=0><TR align=left><TD><A href="http://www.techgeniussolutions.com/">techgeniussolutions.com</A>  &nbsp;|&nbsp;<A href=http://www.techgeniussolutions.com/html/contact.htm>Contact Us</A>&nbsp;|&nbsp;<A href=http://www.techgeniussolutions.com/html/ad.htm>Privacy Policy</A></Td></TR><TR align=left><TD class=Templatetext>Copyright 2009 - 12 Demo Source and Support. All rights reserved.</TD></TR><TR align=left><TD>All other trademarks are property of their respective owners.</TD></TR></TABLE></center></BODY>
+<!-- Mirrored from www.techgeniussolutions.com/Tutorial/Java/0120__Development/Abeanthatcanbeusedtokeeptrackofacounter.htm by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 21 Sep 2013 18:55:44 GMT -->
+</HTML>

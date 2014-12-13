@@ -1,0 +1,249 @@
+<HTML>
+<!-- Mirrored from www.techgeniussolutions.com/Tutorial/Java/0120__Development/RandomGUID.htm by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 21 Sep 2013 18:55:43 GMT -->
+<HEAD><title> Random GUID : UUID&nbsp;&laquo;&nbsp;Development&nbsp;&laquo;&nbsp;Java Tutorial </title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="content-style-type" content="text/css"/><meta name="author" content="Demo Source and Support Ltd."/><meta name="copyright" content="2006 Demo Source and Support Ltd."/><meta name="description" CONTENT=" Random GUID : UUID&nbsp;&laquo;&nbsp;Development&nbsp;&laquo;&nbsp;Java Tutorial "/><meta name="keywords" CONTENT=" Random GUID : UUID&nbsp;&laquo;&nbsp;Development&nbsp;&laquo;&nbsp;Java Tutorial "/><LINK href="../../../style/techgeniussolutions.css" type=text/css rel=stylesheet><link rel="shortcut icon" href="http://www.techgeniussolutions.com/style/favicon.ico"></HEAD><body><H1>Random GUID : UUID&nbsp;&laquo;&nbsp;Development&nbsp;&laquo;&nbsp;Java Tutorial</H1><table width=1024 border=0><tr align=left><td width=140 valign=top align=left><table cellpadding=0 cellspacing=0 class=leftBarTable><tr><td class=leftLangCell><A href="http://www.techgeniussolutions.com/">Home</A></td></tr><tr><td><A href="../CatalogJava.html">Java Tutorial</a></td></tr><tr><td><table class=leftBarFolderTable><tr><td valign=top>1.</td><td><A href="../0020__Language/Catalog0020__Language.html">Language</a></td></tr><tr><td valign=top>2.</td><td><A href="../0040__Data-Type/Catalog0040__Data-Type.html">Data Type</a></td></tr><tr><td valign=top>3.</td><td><A href="../0060__Operators/Catalog0060__Operators.html">Operators</a></td></tr><tr><td valign=top>4.</td><td><A href="../0080__Statement-Control/Catalog0080__Statement-Control.html">Statement Control</a></td></tr><tr><td valign=top>5.</td><td><A href="../0100__Class-Definition/Catalog0100__Class-Definition.html">Class Definition</a></td></tr><tr><td valign=top>6.</td><td><B>Development</B></td></tr><tr><td valign=top>7.</td><td><A href="../0125__Reflection/Catalog0125__Reflection.html">Reflection</a></td></tr><tr><td valign=top>8.</td><td><A href="../0130__Regular-Expressions/Catalog0130__Regular-Expressions.html">Regular Expressions</a></td></tr><tr><td valign=top>9.</td><td><A href="../0140__Collections/Catalog0140__Collections.html">Collections</a></td></tr><tr><td valign=top>10.</td><td><A href="../0160__Thread/Catalog0160__Thread.html">Thread</a></td></tr><tr><td valign=top>11.</td><td><A href="../0180__File/Catalog0180__File.html">File</a></td></tr><tr><td valign=top>12.</td><td><A href="../0200__Generics/Catalog0200__Generics.html">Generics</a></td></tr><tr><td valign=top>13.</td><td><A href="../0220__I18N/Catalog0220__I18N.html">I18N</a></td></tr><tr><td valign=top>14.</td><td><A href="../0240__Swing/Catalog0240__Swing.html">Swing</a></td></tr><tr><td valign=top>15.</td><td><A href="../0260__Swing-Event/Catalog0260__Swing-Event.html">Swing Event</a></td></tr><tr><td valign=top>16.</td><td><A href="../0261__2D-Graphics/Catalog0261__2D-Graphics.html">2D Graphics</a></td></tr><tr><td valign=top>17.</td><td><A href="../0280__SWT/Catalog0280__SWT.html">SWT</a></td></tr><tr><td valign=top>18.</td><td><A href="../0300__SWT-2D-Graphics/Catalog0300__SWT-2D-Graphics.html">SWT 2D Graphics</a></td></tr><tr><td valign=top>19.</td><td><A href="../0320__Network/Catalog0320__Network.html">Network</a></td></tr><tr><td valign=top>20.</td><td><A href="../0340__Database/Catalog0340__Database.html">Database</a></td></tr><tr><td valign=top>21.</td><td><A href="../0350__Hibernate/Catalog0350__Hibernate.html">Hibernate</a></td></tr><tr><td valign=top>22.</td><td><A href="../0355__JPA/Catalog0355__JPA.html">JPA</a></td></tr><tr><td valign=top>23.</td><td><A href="../0360__JSP/Catalog0360__JSP.html">JSP</a></td></tr><tr><td valign=top>24.</td><td><A href="../0380__JSTL/Catalog0380__JSTL.html">JSTL</a></td></tr><tr><td valign=top>25.</td><td><A href="../0400__Servlet/Catalog0400__Servlet.html">Servlet</a></td></tr><tr><td valign=top>26.</td><td><A href="../0410__Web-Services-SOA/Catalog0410__Web-Services-SOA.html">Web Services SOA</a></td></tr><tr><td valign=top>27.</td><td><A href="../0415__EJB3/Catalog0415__EJB3.html">EJB3</a></td></tr><tr><td valign=top>28.</td><td><A href="../0417__Spring/Catalog0417__Spring.html">Spring</a></td></tr><tr><td valign=top>29.</td><td><A href="../0419__PDF/Catalog0419__PDF.html">PDF</a></td></tr><tr><td valign=top>30.</td><td><A href="../0420__Email/Catalog0420__Email.html">Email</a></td></tr><tr><td valign=top>31.</td><td><A href="../0430__J2ME/Catalog0430__J2ME.html">J2ME</a></td></tr><tr><td valign=top>32.</td><td><A href="../0440__J2EE-Application/Catalog0440__J2EE-Application.html">J2EE Application</a></td></tr><tr><td valign=top>33.</td><td><A href="../0440__XML/Catalog0440__XML.html">XML</a></td></tr><tr><td valign=top>34.</td><td><A href="../0460__Design-Pattern/Catalog0460__Design-Pattern.html">Design Pattern</a></td></tr><tr><td valign=top>35.</td><td><A href="../0480__Log/Catalog0480__Log.html">Log</a></td></tr><tr><td valign=top>36.</td><td><A href="../0490__Security/Catalog0490__Security.html">Security</a></td></tr><tr><td valign=top>37.</td><td><A href="../0500__Apache-Common/Catalog0500__Apache-Common.html">Apache Common</a></td></tr><tr><td valign=top>38.</td><td><A href="../0520__Ant/Catalog0520__Ant.html">Ant</a></td></tr><tr><td valign=top>39.</td><td><A href="../0540__JUnit/Catalog0540__JUnit.html">JUnit</a></td></tr></table></td></tr></table></td><td width=2px></td><td valign=top><TABLE class=googleBar width=800 cellSpacing=0 cellPadding=0 border=0><TBODY><TR><TD width=60%><A href="../CatalogJava.html">Java Tutorial</a>&nbsp;&raquo;&nbsp;<A href="Catalog0120__Development.html">Development</a>&nbsp;&raquo;&nbsp;<A href="0960__UUID.html">UUID</a></TD><TD align=right width=10%>&nbsp;</TD><TD align=right height=80% width=30%><form action="#" id="cse-search-box"><div><input type="hidden" name="cx" value="partner-pub-1130008796007602:iri8be-v211" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="text" name="q" size="15" /><input type="submit" name="sa" value="Search" /></div></form><script type="text/javascript" src="#/brand?form=cse-search-box&amp;lang=en"></script></TD></FORM> </TD></TR></TBODY></TABLE><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=728;google_ad_height=90;google_ad_format="728x90_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="ffffff";google_color_link="003399";google_color_text="000000";google_color_url="75a3ed.html";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script><table width=800 border=0><tr><td class=codeTitle>6.54.5.Random GUID<span style='font-SIZE:80%;float:right'><a href='CreateyourownbasicUUID.html'>Previous</a>/<a href='SessionIDgenerator.html'>Next</a></td></tr><tr><td><TABLE border=0><TR><TD height=20></TD></TR></TABLE>
+</td></tr><tr><td><table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+<td nowrap="nowrap" valign="top" align="left"><div class="codeShade"><code><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;RandomGUID&nbsp;from&nbsp;http://www.javaexchange.com/aboutRandomGUID.html</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;@version&nbsp;1.2.1&nbsp;11/05/02</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;@author&nbsp;Marc&nbsp;A.&nbsp;Mnich</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;From&nbsp;www.JavaExchange.com,&nbsp;Open&nbsp;Software&nbsp;licensing</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;11/05/02&nbsp;--&nbsp;Performance&nbsp;enhancement&nbsp;from&nbsp;Mike&nbsp;Dubman.&nbsp;&nbsp;</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moved&nbsp;InetAddr.getLocal&nbsp;to&nbsp;static&nbsp;block.&nbsp;&nbsp;Mike&nbsp;has&nbsp;measured</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;10&nbsp;fold&nbsp;improvement&nbsp;in&nbsp;run&nbsp;time.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;01/29/02&nbsp;--&nbsp;Bug&nbsp;fix:&nbsp;Improper&nbsp;seeding&nbsp;of&nbsp;nonsecure&nbsp;Random&nbsp;object</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;caused&nbsp;duplicate&nbsp;GUIDs&nbsp;to&nbsp;be&nbsp;produced.&nbsp;&nbsp;Random&nbsp;object</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;now&nbsp;only&nbsp;created&nbsp;once&nbsp;per&nbsp;JVM.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;01/19/02&nbsp;--&nbsp;Modified&nbsp;random&nbsp;seeding&nbsp;and&nbsp;added&nbsp;new&nbsp;constructor</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;allow&nbsp;secure&nbsp;random&nbsp;feature.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;01/14/02&nbsp;--&nbsp;Added&nbsp;random&nbsp;function&nbsp;seeding&nbsp;with&nbsp;JVM&nbsp;run&nbsp;time</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.net.InetAddress;</font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.net.UnknownHostException;</font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.security.MessageDigest;</font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.security.NoSuchAlgorithmException;</font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.security.SecureRandom;</font><br/>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.util.Random;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;In&nbsp;the&nbsp;multitude&nbsp;of&nbsp;java&nbsp;GUID&nbsp;generators,&nbsp;I&nbsp;found&nbsp;none&nbsp;that</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;guaranteed&nbsp;randomness.&nbsp;&nbsp;GUIDs&nbsp;are&nbsp;guaranteed&nbsp;to&nbsp;be&nbsp;globally&nbsp;unique</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;by&nbsp;using&nbsp;ethernet&nbsp;MACs,&nbsp;IP&nbsp;addresses,&nbsp;time&nbsp;elements,&nbsp;and&nbsp;sequential</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;numbers.&nbsp;&nbsp;GUIDs&nbsp;are&nbsp;not&nbsp;expected&nbsp;to&nbsp;be&nbsp;random&nbsp;and&nbsp;most&nbsp;often&nbsp;are</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;easy/possible&nbsp;to&nbsp;guess&nbsp;given&nbsp;a&nbsp;sample&nbsp;from&nbsp;a&nbsp;given&nbsp;generator.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;SQL&nbsp;Server,&nbsp;for&nbsp;example&nbsp;generates&nbsp;GUID&nbsp;that&nbsp;are&nbsp;unique&nbsp;but</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;sequencial&nbsp;within&nbsp;a&nbsp;given&nbsp;instance.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;GUIDs&nbsp;can&nbsp;be&nbsp;used&nbsp;as&nbsp;security&nbsp;devices&nbsp;to&nbsp;hide&nbsp;things&nbsp;such&nbsp;as</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;files&nbsp;within&nbsp;a&nbsp;filesystem&nbsp;where&nbsp;listings&nbsp;are&nbsp;unavailable&nbsp;(e.g.&nbsp;files</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;that&nbsp;are&nbsp;served&nbsp;up&nbsp;from&nbsp;a&nbsp;Web&nbsp;server&nbsp;with&nbsp;indexing&nbsp;turned&nbsp;off).</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;This&nbsp;may&nbsp;be&nbsp;desireable&nbsp;in&nbsp;cases&nbsp;where&nbsp;standard&nbsp;authentication&nbsp;is&nbsp;not</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;appropriate.&nbsp;In&nbsp;this&nbsp;scenario,&nbsp;the&nbsp;RandomGUIDs&nbsp;are&nbsp;used&nbsp;as&nbsp;directories.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;Another&nbsp;example&nbsp;is&nbsp;the&nbsp;use&nbsp;of&nbsp;GUIDs&nbsp;for&nbsp;primary&nbsp;keys&nbsp;in&nbsp;a&nbsp;database</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;where&nbsp;you&nbsp;want&nbsp;to&nbsp;ensure&nbsp;that&nbsp;the&nbsp;keys&nbsp;are&nbsp;secret.&nbsp;&nbsp;Random&nbsp;GUIDs&nbsp;can</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;then&nbsp;be&nbsp;used&nbsp;in&nbsp;a&nbsp;URL&nbsp;to&nbsp;prevent&nbsp;hackers&nbsp;(or&nbsp;users)&nbsp;from&nbsp;accessing</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;records&nbsp;by&nbsp;guessing&nbsp;or&nbsp;simply&nbsp;by&nbsp;incrementing&nbsp;sequential&nbsp;numbers.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;There&nbsp;are&nbsp;many&nbsp;other&nbsp;possiblities&nbsp;of&nbsp;using&nbsp;GUIDs&nbsp;in&nbsp;the&nbsp;realm&nbsp;of</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;security&nbsp;and&nbsp;encryption&nbsp;where&nbsp;the&nbsp;element&nbsp;of&nbsp;randomness&nbsp;is&nbsp;important.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;This&nbsp;class&nbsp;was&nbsp;written&nbsp;for&nbsp;these&nbsp;purposes&nbsp;but&nbsp;can&nbsp;also&nbsp;be&nbsp;used&nbsp;as&nbsp;a</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;general&nbsp;purpose&nbsp;GUID&nbsp;generator&nbsp;as&nbsp;well.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;RandomGUID&nbsp;generates&nbsp;truly&nbsp;random&nbsp;GUIDs&nbsp;by&nbsp;using&nbsp;the&nbsp;system's</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;IP&nbsp;address&nbsp;(name/IP),&nbsp;system&nbsp;time&nbsp;in&nbsp;milliseconds&nbsp;(as&nbsp;an&nbsp;integer),</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;and&nbsp;a&nbsp;very&nbsp;large&nbsp;random&nbsp;number&nbsp;joined&nbsp;together&nbsp;in&nbsp;a&nbsp;single&nbsp;String</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;that&nbsp;is&nbsp;passed&nbsp;through&nbsp;an&nbsp;MD5&nbsp;hash.&nbsp;&nbsp;The&nbsp;IP&nbsp;address&nbsp;and&nbsp;system&nbsp;time</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;make&nbsp;the&nbsp;MD5&nbsp;seed&nbsp;globally&nbsp;unique&nbsp;and&nbsp;the&nbsp;random&nbsp;number&nbsp;guarantees</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;that&nbsp;the&nbsp;generated&nbsp;GUIDs&nbsp;will&nbsp;have&nbsp;no&nbsp;discernable&nbsp;pattern&nbsp;and</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;cannot&nbsp;be&nbsp;guessed&nbsp;given&nbsp;any&nbsp;number&nbsp;of&nbsp;previously&nbsp;generated&nbsp;GUIDs.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;It&nbsp;is&nbsp;generally&nbsp;not&nbsp;possible&nbsp;to&nbsp;access&nbsp;the&nbsp;seed&nbsp;information&nbsp;(IP,&nbsp;time,</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;random&nbsp;number)&nbsp;from&nbsp;the&nbsp;resulting&nbsp;GUIDs&nbsp;as&nbsp;the&nbsp;MD5&nbsp;hash&nbsp;algorithm</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;provides&nbsp;one&nbsp;way&nbsp;encryption.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;----&gt;&nbsp;Security&nbsp;of&nbsp;RandomGUID:&nbsp;&lt;-----</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;RandomGUID&nbsp;can&nbsp;be&nbsp;called&nbsp;one&nbsp;of&nbsp;two&nbsp;ways&nbsp;--&nbsp;with&nbsp;the&nbsp;basic&nbsp;java&nbsp;Random</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;number&nbsp;generator&nbsp;or&nbsp;a&nbsp;cryptographically&nbsp;strong&nbsp;random&nbsp;generator</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;(SecureRandom).&nbsp;&nbsp;The&nbsp;choice&nbsp;is&nbsp;offered&nbsp;because&nbsp;the&nbsp;secure&nbsp;random</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;generator&nbsp;takes&nbsp;about&nbsp;3.5&nbsp;times&nbsp;longer&nbsp;to&nbsp;generate&nbsp;its&nbsp;random&nbsp;numbers</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;and&nbsp;this&nbsp;performance&nbsp;hit&nbsp;may&nbsp;not&nbsp;be&nbsp;worth&nbsp;the&nbsp;added&nbsp;security</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;especially&nbsp;considering&nbsp;the&nbsp;basic&nbsp;generator&nbsp;is&nbsp;seeded&nbsp;with&nbsp;a</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;cryptographically&nbsp;strong&nbsp;random&nbsp;seed.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;Seeding&nbsp;the&nbsp;basic&nbsp;generator&nbsp;in&nbsp;this&nbsp;way&nbsp;effectively&nbsp;decouples</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;the&nbsp;random&nbsp;numbers&nbsp;from&nbsp;the&nbsp;time&nbsp;component&nbsp;making&nbsp;it&nbsp;virtually&nbsp;impossible</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;to&nbsp;predict&nbsp;the&nbsp;random&nbsp;number&nbsp;component&nbsp;even&nbsp;if&nbsp;one&nbsp;had&nbsp;absolute&nbsp;knowledge</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;of&nbsp;the&nbsp;System&nbsp;time.&nbsp;&nbsp;Thanks&nbsp;to&nbsp;Ashutosh&nbsp;Narhari&nbsp;for&nbsp;the&nbsp;suggestion</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;of&nbsp;using&nbsp;the&nbsp;static&nbsp;method&nbsp;to&nbsp;prime&nbsp;the&nbsp;basic&nbsp;random&nbsp;generator.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;Using&nbsp;the&nbsp;secure&nbsp;random&nbsp;option,&nbsp;this&nbsp;class&nbsp;compies&nbsp;with&nbsp;the&nbsp;statistical</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;random&nbsp;number&nbsp;generator&nbsp;tests&nbsp;specified&nbsp;in&nbsp;FIPS&nbsp;140-2,&nbsp;Security</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;Requirements&nbsp;for&nbsp;Cryptographic&nbsp;Modules,&nbsp;secition&nbsp;4.9.1.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;I&nbsp;converted&nbsp;all&nbsp;the&nbsp;pieces&nbsp;of&nbsp;the&nbsp;seed&nbsp;to&nbsp;a&nbsp;String&nbsp;before&nbsp;handing</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;it&nbsp;over&nbsp;to&nbsp;the&nbsp;MD5&nbsp;hash&nbsp;so&nbsp;that&nbsp;you&nbsp;could&nbsp;print&nbsp;it&nbsp;out&nbsp;to&nbsp;make</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;sure&nbsp;it&nbsp;contains&nbsp;the&nbsp;data&nbsp;you&nbsp;expect&nbsp;to&nbsp;see&nbsp;and&nbsp;to&nbsp;give&nbsp;a&nbsp;nice</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;warm&nbsp;fuzzy.&nbsp;&nbsp;If&nbsp;you&nbsp;need&nbsp;better&nbsp;performance,&nbsp;you&nbsp;may&nbsp;want&nbsp;to&nbsp;stick</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;to&nbsp;byte[]&nbsp;arrays.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;I&nbsp;believe&nbsp;that&nbsp;it&nbsp;is&nbsp;important&nbsp;that&nbsp;the&nbsp;algorithm&nbsp;for</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;generating&nbsp;random&nbsp;GUIDs&nbsp;be&nbsp;open&nbsp;for&nbsp;inspection&nbsp;and&nbsp;modification.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;This&nbsp;class&nbsp;is&nbsp;free&nbsp;for&nbsp;all&nbsp;uses.</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*&nbsp;-&nbsp;Marc</font><br/>
+<font color="#ffffff">&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">RandomGUID&nbsp;&nbsp;</font><font color="#000000">{</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;valueBeforeMD5&nbsp;=&nbsp;</font><font color="#2a00ff">&#34;&#34;</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;valueAfterMD5&nbsp;=&nbsp;</font><font color="#2a00ff">&#34;&#34;</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;static&nbsp;</b></font><font color="#000000">Random&nbsp;myRand;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;static&nbsp;</b></font><font color="#000000">SecureRandom&nbsp;mySecureRand;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;static&nbsp;</b></font><font color="#000000">String&nbsp;s_id;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Static&nbsp;block&nbsp;to&nbsp;take&nbsp;care&nbsp;of&nbsp;one&nbsp;time&nbsp;secureRandom&nbsp;seed.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;It&nbsp;takes&nbsp;a&nbsp;few&nbsp;seconds&nbsp;to&nbsp;initialize&nbsp;SecureRandom.&nbsp;&nbsp;You&nbsp;might</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;want&nbsp;to&nbsp;consider&nbsp;removing&nbsp;this&nbsp;static&nbsp;block&nbsp;or&nbsp;replacing</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;it&nbsp;with&nbsp;a&nbsp;&#34;time&nbsp;since&nbsp;first&nbsp;loaded&#34;&nbsp;seed&nbsp;to&nbsp;reduce&nbsp;this&nbsp;time.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;This&nbsp;block&nbsp;will&nbsp;run&nbsp;only&nbsp;once&nbsp;per&nbsp;JVM&nbsp;instance.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>static&nbsp;</b></font><font color="#000000">{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">mySecureRand&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">SecureRandom</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">secureInitializer&nbsp;=&nbsp;mySecureRand.nextLong</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">myRand&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Random</font><font color="#000000">(</font><font color="#000000">secureInitializer</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try&nbsp;</b></font><font color="#000000">{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">s_id&nbsp;=&nbsp;InetAddress.getLocalHost</font><font color="#000000">()</font><font color="#000000">.toString</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>catch&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000">UnknownHostException&nbsp;e&nbsp;</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">e.printStackTrace</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Default&nbsp;constructor.&nbsp;&nbsp;With&nbsp;no&nbsp;specification&nbsp;of&nbsp;security&nbsp;option,</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;this&nbsp;constructor&nbsp;defaults&nbsp;to&nbsp;lower&nbsp;security,&nbsp;high&nbsp;performance.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">RandomGUID</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">getRandomGUID</font><font color="#000000">(</font><font color="#7f0055"><b>false</b></font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Constructor&nbsp;with&nbsp;security&nbsp;option.&nbsp;&nbsp;Setting&nbsp;secure&nbsp;true</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;enables&nbsp;each&nbsp;random&nbsp;number&nbsp;generated&nbsp;to&nbsp;be&nbsp;cryptographically</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;strong.&nbsp;&nbsp;Secure&nbsp;false&nbsp;defaults&nbsp;to&nbsp;the&nbsp;standard&nbsp;Random&nbsp;function&nbsp;seeded</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;with&nbsp;a&nbsp;single&nbsp;cryptographically&nbsp;strong&nbsp;random&nbsp;number.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">RandomGUID</font><font color="#000000">(</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">secure</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">getRandomGUID</font><font color="#000000">(</font><font color="#000000">secure</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Method&nbsp;to&nbsp;generate&nbsp;the&nbsp;random&nbsp;GUID</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">getRandomGUID</font><font color="#000000">(</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">secure</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">MessageDigest&nbsp;md5&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">StringBuffer&nbsp;sbValueBeforeMD5&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">StringBuffer</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try&nbsp;</b></font><font color="#000000">{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">md5&nbsp;=&nbsp;MessageDigest.getInstance</font><font color="#000000">(</font><font color="#2a00ff">&#34;MD5&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>catch&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000">NoSuchAlgorithmException&nbsp;e&nbsp;</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;Error:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;e</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try&nbsp;</b></font><font color="#000000">{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">time&nbsp;=&nbsp;System.currentTimeMillis</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">rand&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000">secure&nbsp;</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">rand&nbsp;=&nbsp;mySecureRand.nextLong</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;</b></font><font color="#000000">{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">rand&nbsp;=&nbsp;myRand.nextLong</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;This&nbsp;StringBuffer&nbsp;can&nbsp;be&nbsp;a&nbsp;long&nbsp;as&nbsp;you&nbsp;need;&nbsp;the&nbsp;MD5</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;hash&nbsp;will&nbsp;always&nbsp;return&nbsp;128&nbsp;bits.&nbsp;&nbsp;You&nbsp;can&nbsp;change</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;seed&nbsp;to&nbsp;include&nbsp;anything&nbsp;you&nbsp;want&nbsp;here.</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;You&nbsp;could&nbsp;even&nbsp;stream&nbsp;a&nbsp;file&nbsp;through&nbsp;the&nbsp;MD5&nbsp;making</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;odds&nbsp;of&nbsp;guessing&nbsp;it&nbsp;at&nbsp;least&nbsp;as&nbsp;great&nbsp;as&nbsp;that</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;of&nbsp;guessing&nbsp;the&nbsp;contents&nbsp;of&nbsp;the&nbsp;file!</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sbValueBeforeMD5.append</font><font color="#000000">(</font><font color="#000000">s_id</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sbValueBeforeMD5.append</font><font color="#000000">(</font><font color="#2a00ff">&#34;:&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sbValueBeforeMD5.append</font><font color="#000000">(</font><font color="#000000">Long.toString</font><font color="#000000">(</font><font color="#000000">time</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sbValueBeforeMD5.append</font><font color="#000000">(</font><font color="#2a00ff">&#34;:&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sbValueBeforeMD5.append</font><font color="#000000">(</font><font color="#000000">Long.toString</font><font color="#000000">(</font><font color="#000000">rand</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">valueBeforeMD5&nbsp;=&nbsp;sbValueBeforeMD5.toString</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">md5.</font><font color="#7f0055"><b>update</b></font><font color="#000000">(</font><font color="#000000">valueBeforeMD5.getBytes</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>byte</b></font><font color="#000000">[]&nbsp;</font><font color="#000000">array&nbsp;=&nbsp;md5.digest</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">StringBuffer&nbsp;sb&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">StringBuffer</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">j&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;j&nbsp;&lt;&nbsp;array.length;&nbsp;++j&nbsp;</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">b&nbsp;=&nbsp;array</font><font color="#000000">[</font><font color="#000000">j</font><font color="#000000">]&nbsp;</font><font color="#000000">&amp;&nbsp;</font><font color="#990000">0xFF</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000">b&nbsp;&lt;&nbsp;</font><font color="#990000">0x10&nbsp;</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#990000">'0'</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#000000">Integer.toHexString</font><font color="#000000">(</font><font color="#000000">b</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">valueAfterMD5&nbsp;=&nbsp;sb.toString</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>catch&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000">Exception&nbsp;e&nbsp;</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;Error:&#34;&nbsp;</font><font color="#000000">+&nbsp;e</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Convert&nbsp;to&nbsp;the&nbsp;standard&nbsp;format&nbsp;for&nbsp;GUID</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;(Useful&nbsp;for&nbsp;SQL&nbsp;Server&nbsp;UniqueIdentifiers,&nbsp;etc.)</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Example:&nbsp;C2FEEEAC-CFCD-11D1-8B05-00600806D9B6</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;toString</font><font color="#000000">()&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;raw&nbsp;=&nbsp;valueAfterMD5.toUpperCase</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">StringBuffer&nbsp;sb&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">StringBuffer</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#000000">raw.substring</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">,&nbsp;</font><font color="#990000">8</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#2a00ff">&#34;-&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#000000">raw.substring</font><font color="#000000">(</font><font color="#990000">8</font><font color="#000000">,&nbsp;</font><font color="#990000">12</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#2a00ff">&#34;-&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#000000">raw.substring</font><font color="#000000">(</font><font color="#990000">12</font><font color="#000000">,&nbsp;</font><font color="#990000">16</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#2a00ff">&#34;-&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#000000">raw.substring</font><font color="#000000">(</font><font color="#990000">16</font><font color="#000000">,&nbsp;</font><font color="#990000">20</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#2a00ff">&#34;-&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.append</font><font color="#000000">(</font><font color="#000000">raw.substring</font><font color="#000000">(</font><font color="#990000">20</font><font color="#000000">))</font><font color="#000000">;</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">sb.toString</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff"></font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#3f7f5f">/*</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Demonstraton&nbsp;and&nbsp;self&nbsp;test&nbsp;of&nbsp;class</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*/</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">main</font><font color="#000000">(</font><font color="#000000">String&nbsp;args</font><font color="#000000">[])&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">i&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;i&nbsp;&lt;&nbsp;</font><font color="#990000">100</font><font color="#000000">;&nbsp;i++&nbsp;</font><font color="#000000">)&nbsp;{</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">RandomGUID&nbsp;myGUID&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">RandomGUID</font><font color="#000000">()</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;Seeding&nbsp;String=&#34;&nbsp;</font><font color="#000000">+&nbsp;myGUID.valueBeforeMD5</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;rawGUID=&#34;&nbsp;</font><font color="#000000">+&nbsp;myGUID.valueAfterMD5</font><font color="#000000">)</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;RandomGUID=&#34;&nbsp;</font><font color="#000000">+&nbsp;myGUID.toString</font><font color="#000000">())</font><font color="#000000">;</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br/>
+<font color="#000000">}</font></code></div></td>   </tr>
+</table>
+</td></tr></table><div style='margin-left:10px;'><TABLE width="650"  border=0 cellSpacing=0 cellPadding=0 border=0><TBODY>
+<TR><TD align=left><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=300;google_ad_height=250;google_ad_format="300x250_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="FFFFFF";google_color_link="0077cc";google_color_url="0077cc.html";google_color_text="000000";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script></TD>
+<td align=right><script type="text/javascript"><!--
+google_ad_client="pub-1130008796007602";google_ad_width=300;google_ad_height=250;google_ad_format="300x250_as";google_ad_type="text_image";google_ad_channel="";google_color_border="ffffff";google_color_bg="FFFFFF";google_color_link="0077cc";google_color_url="0077cc.html";google_color_text="000000";
+//--></script><script type="text/javascript"src="../../../../pagead2.googlesyndication.com/pagead/show_ads.js"></script></td></TR></TBODY></TABLE></div><TABLE border=0><TR><TD height=20></TD></TR></TABLE>
+<table cellpadding=0 cellspacing=0 width=800 border=0><tr><td colSpan=5>6.54.UUID</td></tr><tr class=odd><td width=20></td><td width=100>6.54.1.</td><td  align=left><A href="GetauniqueidentifierUsingjavarmidgcVMID.html">Get a unique identifier Using java.rmi.dgc.VMID</a></td></tr><tr class=even><td width=20></td><td width=100>6.54.2.</td><td  align=left><A href="UsingjavautilUUID.html">Using java.util.UUID</a></td></tr><tr class=odd><td width=20></td><td width=100>6.54.3.</td><td  align=left><A href="UsingjavautilconcurrentAtomicLongAnumericalidstartatzeroandincrementbyone.html">Using java.util.concurrent.AtomicLong: A numerical id, start at zero and increment by one.</a></td></tr><tr class=even><td width=20></td><td width=100>6.54.4.</td><td  align=left><A href="CreateyourownbasicUUID.html">Create your own basic UUID</a></td></tr><tr class=odd><td width=20></td><td width=100>6.54.5.</td><td  align=left>Random GUID</td></tr><tr class=even><td width=20></td><td width=100>6.54.6.</td><td  align=left><A href="SessionIDgenerator.html">Session ID generator</a></td></tr><tr class=odd><td width=20></td><td width=100>6.54.7.</td><td  align=left><A href="GeneratesaUUID.html">Generates a UUID</a></td></tr><tr class=even><td width=20></td><td width=100>6.54.8.</td><td  align=left><A href="IDgenerator.html">ID generator</a></td></tr><tr class=odd><td width=20></td><td width=100>6.54.9.</td><td  align=left><A href="GeneratorforGloballyuniqueStrings.html">Generator for Globally unique Strings</a></td></tr><tr class=even><td width=20></td><td width=100>6.54.10.</td><td  align=left><A href="GeneratesrandomUUIDs.html">Generates random UUIDs</a></td></tr><tr class=odd><td width=20></td><td width=100>6.54.11.</td><td  align=left><A href="UUIDgenerator.html">UUID generator</a></td></tr></table><TABLE border=0><TR><TD height=10></TD></TR></TABLE>
+</td></tr></table></td></tr></table><center><TABLE border=0><TR align=left><TD><A href="http://www.techgeniussolutions.com/">techgeniussolutions.com</A>  &nbsp;|&nbsp;<A href=http://www.techgeniussolutions.com/html/contact.htm>Contact Us</A>&nbsp;|&nbsp;<A href=http://www.techgeniussolutions.com/html/ad.htm>Privacy Policy</A></Td></TR><TR align=left><TD class=Templatetext>Copyright 2009 - 12 Demo Source and Support. All rights reserved.</TD></TR><TR align=left><TD>All other trademarks are property of their respective owners.</TD></TR></TABLE></center></BODY>
+<!-- Mirrored from www.techgeniussolutions.com/Tutorial/Java/0120__Development/RandomGUID.htm by HTTrack Website Copier/3.x [XR&CO'2013], Sat, 21 Sep 2013 18:55:43 GMT -->
+</HTML>
